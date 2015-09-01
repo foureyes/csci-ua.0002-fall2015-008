@@ -1,0 +1,209 @@
+body {
+	margin:0px;
+	padding:0px;
+}
+
+html, body {
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	/* #446677 */
+	background-color:#530510;
+	color:#000;
+}
+
+#hd {
+	padding:5px 0px 0px 0px;
+	background-color:#530510;
+	text-align:center;
+	color: #eef;
+	width:100%
+	top:0px;
+	left:0px;
+}
+
+#ft {
+	padding:20px 0px 20px 0px;
+	text-align:center;
+	color: #eef;
+}
+
+#nav {
+	list-style:none;
+	padding:0.5em 0em 0.5em 0em;
+	/* background-color:#444455; */
+	background-color:#110133;
+	
+	margin-bottom:0px;
+}
+
+#nav ul {
+}
+
+#nav li {
+	background-color:#110133;
+	display:inline;
+	font-size:1em;
+	margin-right:-4px;
+}
+
+#nav li a {
+	color: #eef;
+	text-decoration:none;
+	padding:0.5em 1em 0.5em 1em;
+}
+
+#nav li a:hover {
+	background-color:#333355;
+}
+
+#nav .current-page{
+	background-color:#333355;
+	padding:0.5em 1em 0.5em 1em;
+	color: #dde;
+}
+.fixed { position: fixed; top: -20px;  }
+
+#nav-container {
+	width:100%;
+}
+
+#bd {
+	background-color:#fff;
+}
+
+#content {
+	width: 90%;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	margin:auto;
+}
+
+
+h1,h2	{ 
+	font-weight:normal; 
+}
+
+#bd h1 {
+	color:#022;
+	font-size: 1.75em;
+}
+
+#bd h2 {
+	font-size: 1.25em;
+}
+
+table {
+	border-spacing:0px;
+	border-collapse:collapse;
+}
+
+td {
+	padding:0.25em 1em 0.25em 1em;
+	border: 1px solid #000;
+	vertical-align:top;
+}
+
+#schedule ul li ul {
+	display:none;
+}
+
+#schedule tr td ul {
+	padding:0em 1.25em 0em 1.25em;
+}
+
+
+.no-class-date td {
+	background-color:#bbb;
+}
+
+tbody tr:nth-child(odd) {
+	background-color:#eee;
+}
+
+tbody tr > td:1st-child {
+	width: 1.5em;
+}
+
+a:visited {
+	color:#224455;
+}
+a:hover {
+	color:#224455;
+	background-color:#aab1bb;
+}
+a {
+	color:#333355;
+}
+#my-schedule {
+	padding-bottom: 2em;
+}
+
+#my-schedule section {
+	border: 1px solid #ccc;
+	background-color: #ebebef;
+}
+
+#my-schedule section h3 {
+	border-bottom: 1px solid #ccc;
+	font-size: 1.05em;
+	margin: 0;
+	padding: 0.5em;
+}
+
+#my-schedule .class-details {
+	display: flex;
+	/* flex-wrap: wrap; */
+}
+
+#my-schedule h1 {
+	text-align: center;
+}
+
+#my-schedule section article h4 {
+	margin: 0;
+	padding: 0.1em;
+}
+
+#my-schedule section article {
+	padding: 0.5em;
+}
+
+@media screen 
+and (min-width: 640px) {
+	#my-schedule section article {
+		flex-grow: 1;
+		width: auto;
+	}
+}
+
+@media screen 
+and (max-width: 639px) {
+	#my-schedule .class-details {
+		flex-wrap: wrap;
+	}
+	#my-schedule section article {
+		flex-grow: 0;
+		width: 100%;
+	}
+}
+
+#my-schedule section.workshop h3 {
+	background-color: #bfcfbf;
+}
+
+#my-schedule section.exam h3 {
+	background-color: #e8cfcf;
+}
+
+#my-schedule section.workshop h3 {
+
+}
+
+
+
+
+
+ 
