@@ -22,33 +22,13 @@
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
 
-Assignments 
-
-* Complete the [Self Paced-Learning Module #1](http://cs.nyu.edu/elearning/CSCI_UA_0002/module01.php)
-* Take quiz #1 on NYU Classes
-
 Readings
 
 * Read {{ site.bookq }} - Chapter 1
+
+Assignments 
+
+* Complete the [Self Paced-Learning Module #1]({{ site.module1 }})
+* Take quiz #1 on NYU Classes - __Due 9/9, 12:30pm__
+
 </article>
-
-
-{% comment %}
-###Slides
-
-
-###Handouts
-[Reading a Program](resources/handouts/class01/reading-a-program.pdf)
-
-###Readings
-* {{ site.bookq }} - Chapter 1
-* [{{ site.bookt }} - Chapter 1](http://openbookproject.net/thinkcs/python/english3e/way_of_the_program.html)
-
-### Vocabulary
-See [the glossary](http://openbookproject.net/thinkcs/python/english3e/way_of_the_program.html#glossary) in {{ site.bookt }} for [chapter 1](http://openbookproject.net/thinkcs/python/english3e/way_of_the_program.html).
-
-### Homework #0
-
-__Nothing to submit... just some stuff to try at home__:
-
-{% endcomment %}

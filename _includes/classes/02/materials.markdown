@@ -1,9 +1,10 @@
 <article class="due" markdown="block">
 #### Due Today
 
-{% comment %}
-* Homework
-{% endcomment %}
+
+* {{ site.bookq }} - Chapter 1
+* [Self Paced-Learning Module #1]({{ site.module1 }})
+* Quiz #1
 
 </article>
 

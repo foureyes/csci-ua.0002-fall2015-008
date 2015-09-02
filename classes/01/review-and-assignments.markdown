@@ -19,31 +19,21 @@ title: Review and Assignments Slides
 </section>
 
 <section markdown="block">
-### Readings
+### Readings and Assignments
+
+* Complete the [Self Paced-Learning Module #1]({{ site.module1 }})
+	* you'll install Python on your computer
+	* you'll write some simple programs!
+* Take quiz #1 on NYU Classes
 * {{ site.bookq }} - Chapter 1
 
 </section>
 
-<section markdown="block">
-### Optional
-<aside markdown="block">
-It's optional, but you should _really_ do this
-</aside>
-
-I won't check, but life will be easier for you if you get this out of the way now:
-
-* __install Python 3__ on your own computer (unless you're planning on using the labs)
-* try __writing the "Hello world!" program__ on your own
-* try the __interactive Python shell__ on your own
-* purposely __make some mistakes__
-* try the Review questions in the book on your own
-</section>
 
 <section markdown="block">
 ### Some Reminders
 
 * bring your laptop to class
-* pen/pencil and paper will work too
-* try this stuff outside of class!
-* ask a lot of questions!
+* try this stuff outside of class
+* __ask a lot of questions!__
 </section>
