@@ -15,6 +15,7 @@ General Resources
 	* [Tutorial](http://docs.python.org/py3k/tutorial/index.html)
 	* [Language Reference](http://docs.python.org/py3k/reference/index.html)
 * [Contact Info / Office Hours](index.html#contact-info)
+	
 
 <a name="text"></a>
 

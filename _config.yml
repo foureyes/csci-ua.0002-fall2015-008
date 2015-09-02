@@ -21,6 +21,9 @@ course_url: http://foureyes.github.io/csci-ua.0002-fall2015-008
 office_hours: "Mondays and Wednesdays from 2:00pm to 3:00pm and Thursdays 11:00AM to 12:00PM"
 office_hours_room: WWH 423
 
+# email
+email: "jversoza at cs dot nyu dot edu"
+
 # finals
 final_schedule: http://www.cs.nyu.edu/webapps/fall2015/Undergraduate/final_exams 
 final_date: Thursday, May 14th

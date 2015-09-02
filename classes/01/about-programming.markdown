@@ -90,6 +90,7 @@ __program__ - a sequence of instructions that specifies to a computer actions an
 Some motivation...
 </aside>
 * I'm going to be the next [Sid Meier](http://en.wikipedia.org/wiki/Sid_Meier), [Ada Lovelace](http://en.wikipedia.org/wiki/Ada_Lovelace#First_computer_program), or [Mark Zuckerberg](http://en.wikipedia.org/wiki/Mark_Zuckerberg)!
+* (Speaking of Ada Lovelace, [this is a computer!](https://upload.wikimedia.org/wikipedia/commons/a/ac/AnalyticalMachine_Babbage_London.jpg))
 * I'm obsessive about my [spreadsheets](http://cdn.twentytwowords.com/wp-content/uploads/Batman-in-Microsoft-Excel.png); I need to get that formula/conditional formatting to work! 
 * Statistics is hard; I need to learn some [R](http://en.wikipedia.org/wiki/R_(programming_language))!
 * Physics is hard; I need to learn some [MATLAB](http://en.wikipedia.org/wiki/MATLAB)!

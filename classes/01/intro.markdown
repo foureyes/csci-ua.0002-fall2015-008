@@ -85,6 +85,21 @@ INFO - you can also get to this through Courant's list of courses
 </section>
 
 <section markdown="block">
+###Contacting Me
+<aside>
+Let's talk, ok???
+</aside>
+* email me at __{{ site.email }}__
+* if I don't get back to you within 48 hours
+	* robots think your email is shady
+	* I wasn't able to get to your email yet
+	* my inbox exploded
+* ... so you should email me again, or __if it's urgent__:
+	* see me before or after class
+	* drop by {{ site.office_hours_room }} on {{ site.office_hours }}
+</section>
+
+<section markdown="block">
 ###Today
 <aside>
 We'll go over...
