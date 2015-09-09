@@ -97,7 +97,7 @@ Jump to Class:
 <a name="class4"></a><!---------- start --------------->
 
 <section markdown="block" class="workshop" class="workshop">
-### MON 9/16, Class #4 (Programming Assignment)
+### WED 9/16, Class #4 (Programming Assignment)
 
 <div class="class-details">
 <article class="topics" markdown="block">

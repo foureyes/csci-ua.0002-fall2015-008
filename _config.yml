@@ -38,6 +38,14 @@ bookt: How to Think Like a Computer Scientist
 departmental_syllabus: "http://cs.nyu.edu/courses/fall15/CSCI-UA.0002-002/common_syllabus/"
 
 module1: "http://cs.nyu.edu/elearning/CSCI_UA_0002/module01.php"
+module2: "http://cs.nyu.edu/elearning/CSCI_UA_0002/module02.php"
+module3: "http://cs.nyu.edu/elearning/CSCI_UA_0002/module03.php"
+module4: "http://cs.nyu.edu/elearning/CSCI_UA_0002/module04.php"
+module5: "http://cs.nyu.edu/elearning/CSCI_UA_0002/module05.php"
+module6: "http://cs.nyu.edu/elearning/CSCI_UA_0002/module06.php"
+module7: "http://cs.nyu.edu/elearning/CSCI_UA_0002/module07.php"
+module8: "http://cs.nyu.edu/elearning/CSCI_UA_0002/module08.php"
+module9: "http://cs.nyu.edu/elearning/CSCI_UA_0002/module09.php"
 
 # manual section change
 # http://foureyes.github.io/csci-ua.0002-spring2015-008 -> http://foureyes.github.io/csci-ua.0002-fall2014-010
