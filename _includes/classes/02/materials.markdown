@@ -45,6 +45,7 @@ Homework #1 __Due Wednesday, Sep 16th, at 11PM__
 3. [tree.py](homework/hw01/tree.py) - 2 points
 4. [temperature.py](homework/hw01/temperature.py) - 4 points
 5. [miles.py](homework/hw01/miles.py) - 4 points
+5. [foods.py](homework/hw01/foods.py) - 5 points
 
 Example output for tree.py:
 
