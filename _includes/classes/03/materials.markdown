@@ -17,7 +17,7 @@
 * [Review Values, Types, Operations and Variables](classes/03/review.html)
 * [Review Calling Functions](classes/03/function-calls.html)
 * [Review User Input](classes/03/input-review.html)
-* [Formatting Output](classes/03/formatting.html)
+* [Formatting Output (Print and Format)](classes/03/formatting.html)
 * [Idioms and Style](classes/03/idioms-style.html)
 * [Variables Continued](classes/03/variables.html)
 * [Designing a Program (previous class)](classes/02/design-input-output.html)
