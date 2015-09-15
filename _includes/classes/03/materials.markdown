@@ -39,11 +39,13 @@
 Readings
 
 * {{ site.bookq }} - Chapter 2 (Input, Processing and Output)
-* {{ site.bookq }} - Chapter 5 (only parts of 5.1 through 5.5 - up to "Keyword Arguments" - for now)
 * [{{site.bookt}} - Chapter 2](http://openbookproject.net/thinkcs/python/english3e/variables_expressions_statements.html)
 
-Assignments 
+Module, Quiz and Readings __Due Monday, Sep 21st, before class__ 
 
+
+* Complete the [Self Paced-Learning Module #3]({{ site.module3 }})
+* Take quiz #3 on NYU Classes
 </article>
 {% comment %}
 
