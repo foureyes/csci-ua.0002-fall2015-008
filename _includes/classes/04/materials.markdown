@@ -19,15 +19,13 @@
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
 
-{% comment %}
-Readings
+Homework #2 __Due Wednesday, Sep 23rd, at 11PM__ 
 
-* Read {{ site.bookq }} - Chapter 1
+1. [multiply.py](homework/hw02/multiply.py)
+2. [grade_bot_3000.py](homework/hw02/grade_bot_3000.py)
+3. [change_puhleese.py](homework/hw02/change_puhleese.py)
+4. [numbers.py](homework/hw02/numbers.py)
 
-Assignments 
-
-1. [questions.py](homework/hw01/questions.py) - 9 points
-{% endcomment %}
 </article>
 {% comment %}
 <a name="class4"></a>
