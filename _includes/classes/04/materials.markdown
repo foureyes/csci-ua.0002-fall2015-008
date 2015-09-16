@@ -19,6 +19,14 @@
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
 
+Warm-up
+
+* formatting 
+	* formatting a %
+	* aligning everything right
+* stadium seating with formatted $ output
+* demo homework programs
+
 Homework #2 __Due Wednesday, Sep 23rd, at 11PM__ 
 
 1. [multiply.py](homework/hw02/multiply.py)

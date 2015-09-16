@@ -78,10 +78,6 @@ How many are being purchased?
 > 3
 How much was paid?
 > 150.03
-....
-4388
-175
-<class 'int'>
                           PREMIER PYTHON PLAZA RECEIPT
 ================================================================================
 3 x Guido Van Rossum Bobble Head                                          $30.00
