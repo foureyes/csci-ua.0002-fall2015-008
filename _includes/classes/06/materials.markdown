@@ -1,9 +1,7 @@
 <article class="due" markdown="block">
 #### Due Today
 
-{% comment %}
-* Homework
-{% endcomment %}
+* Homework #2
 
 </article>
 

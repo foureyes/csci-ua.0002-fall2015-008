@@ -1,9 +1,8 @@
 <article class="due" markdown="block">
 #### Due Today
 
-{% comment %}
-* Homework
-{% endcomment %}
+* [Self Paced-Learning Module #3]({{ site.module3 }})
+* Quiz #3 on NYU Classes
 
 </article>
 
