@@ -198,9 +198,9 @@ no, because it is always comparing a string to an int
 </section>
 
 <section markdown="block">
-### Number Guessing Game Revisisted
+### Number Guessing Game
 
-You may have seen this in the previous set of slides, but let's zip through it again.  __Create a game that__ &rarr;
+__Create a game that__ &rarr;
 
 * hardcodes a "secret" number 
 * asks the user to guess that secret number

@@ -10,8 +10,9 @@ title: About Class #5
 <section markdown="block">
 ### Today's Class...
 
-* review: functions, if and if-else
+* review: if and if-else
 * boolean logic
+* modules (generating random numbers)
 * string formatting (optional)
 </section>
 
@@ -26,6 +27,14 @@ title: About Class #5
 </section>
 
 <section markdown="block">
+### Homework #2
+
+* remember, one of the files is super long!
+* please don't wait last minute to do it
+* again... drop by office hours, work with the tutors, email the etutor!
+</section>
+
+<section markdown="block">
 ### Lost in a Forest
 
 Your tree programs:
@@ -34,9 +43,4 @@ Your tree programs:
 * [trees](../../resources/txt/trees.txt)
 * btw, what was challenging about this (if it were challenging _at all_)
 * (oh yes, follow directions... print twice!)
-</section>
-
-
-<section markdown="block">
-## [Review: Functions](review-functions.html)
 </section>

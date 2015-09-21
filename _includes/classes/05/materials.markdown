@@ -9,9 +9,13 @@
 <article class="slides" markdown="block">
 #### Slides
 
-{% comment %}
-* [Slides](classes/01/intro.html)
-{% endcomment %}
+* [About Class #5](classes/05/meta.html)
+* [Review Conditionals](classes/05/review-conditionals.html)
+* [Boolean Logic](classes/05/boolean-logic.html)
+* [Types, Operators, Precedence](classes/05/types-operators-precedence.html)
+* [If Statements - Advanced](classes/05/if-statements-advanced.html)
+* [Built-In Modules](classes/05/modules.html)
+* [String Formatting](classes/05/string-formatting.html)
 
 </article>
 
@@ -32,11 +36,6 @@ Assignments
 <a name="class5"></a>
 
 ###Slides
-* [About Class #5](classes/05/meta.html)
-* [Review Functions](classes/05/review-functions.html)
-* [Review Conditionals](classes/05/review-conditionals.html)
-* [Boolean Logic](classes/05/boolean-logic.html)
-* [If Statements](classes/05/if-statements.html)
 
 ###Handouts
 [User Input, Type Conversion, Functions, If Statements](resources/handouts/class05/input-types-if.pdf) 

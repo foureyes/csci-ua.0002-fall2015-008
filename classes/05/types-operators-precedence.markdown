@@ -66,7 +66,6 @@ __What are some string operations that we've used?__
 <div class="incremental" markdown="block"> 
 * __+__ - concatenation - only strings
 * __\*__ - multiplication - string and int!
-* __%__ - interpolation - only strings \* sort of
 </div>
 </section>
 
@@ -89,19 +88,19 @@ __What are the six comparison operators that we learned about, and how do they w
 <section markdown="block">
 ### Let's Talk About Logical Operators
 
-__What are the three logical operators that we learned about?__
+__What are the three logical operators that we learned about?  Describe when each would return True.__ &rarr;
 
 <div class="incremental" markdown="block"> 
-* and
-* or
-* not
+* __and__ - evaluates to True if both operands are True
+* __or__ - evaluates to True if either operand is True
+* __not__ - evaluates to True if operand is False
 </div>
 </section>
 
 <section markdown="block">
 ### What Order Do All of These Operators Go In?
 
-__So.  With all of these operations, which ones take precedence?__
+__So.  With all of these _types_ of operations, what order are they evaluated in?__ &rarr;
 
 <div class="incremental" markdown="block"> 
 1. Parentheses
@@ -115,10 +114,77 @@ __So.  With all of these operations, which ones take precedence?__
 </section>
 
 <section markdown="block">
+### Let's Try a Few...
+
+__What boolean value does the following expression evaluate to?__ &rarr;
+{% highlight python %}
+"five" == 5 or  14 == 7 + 2 * 5
+{% endhighlight %}
+
+<div class="incremental" markdown="block"> 
+{% highlight python %}
+False
+{% endhighlight %}
+
+__Aaaaand... how about this one?__ &rarr;
+
+{% highlight python %}
+False or True and not False
+{% endhighlight %}
+
+{% highlight python %}
+True
+{% endhighlight %}
+</div>
+</section>
+
+<section markdown="block">
+### Logical Operators and Their Operands
+
+__How many operands does each logical operator take... what type is each operand?__ &rarr;
+
+<div class="incremental" markdown="block"> 
+* __and__ - 2 operands - values are treated as boolean
+* __or__ - 2 operands - values are treated as boolean
+* __not__ - 1 operands - values is treated as boolean
+</div>
+</section>
+
+<section markdown="block">
+### Watch Out for This!
+
+__Let's write a boolean expression that checks if the variable, _answer_, is equal to "yes" or "yeah":__ &rarr;
+
+<div class="incremental" markdown="block"> 
+{% highlight python %}
+answer == "yes" or answer == "yeah"
+{% endhighlight %}
+
+Note that the following __won't work__!
+
+{% highlight python %}
+# the logical operator, or, tries to treat "yeah" as a bool
+answer == "yes" or "yeah"
+{% endhighlight %}
+
+__let's try both versions with answer set as "no"__ &rarr;
+
+{% highlight pycon %}
+>>> answer = "no"
+>>> answer == "yes" or answer == "yeah"
+False
+>>> answer == "yes" or "yeah"
+'yeah'
+{% endhighlight %}
+</div>
+
+</section>
+
+<section markdown="block">
 
 ### Conditionals
 
-* syntax - if, condition, colon, indented body
+* syntax - if, boolean expression, colon, indented body
 * note that the end result of comparisons... are essentially the same as bare literal
 * some example code I have takes the shortcut of putting in the bool literal
 {% highlight python %}
@@ -132,10 +198,5 @@ if True:
 </section>
 
 <section markdown="block">
-### Review Answers to Handout
-[Sooo... with all of that said, let's go over the answers to the handout from the previous class!](../../resources/handouts/class05/input-types-if.pdf).
-</section>
-
-<section markdown="block">
-## [How to Complicate Things With If Statements](if-statements-advanced.html)
+## [How to (Un)Complicate Things With If Statements](if-statements-advanced.html)
 </section>

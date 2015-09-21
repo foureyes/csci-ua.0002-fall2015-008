@@ -21,8 +21,11 @@ __We've already learned one way to put together strings. What is it? &rarr;__
 
 <section markdown="block">
 ### There's Also String Formatting
-__String formatting__ allows you to put placeholders in your string where values should go.  One way to this is to use the __%__ operator (there's a more modern syntax, but you'll still see this a lot):
 
+__String formatting__ allows you to put placeholders in your string where values should go.  
+
+* one way to this is to use the __%__ operator 
+* (there's a more modern syntax, but you'll still see this a lot)
 * the __%__ sign signals that the string on the left will be populated by the comma separated values enclosed in parentheses on the right
 * __%s__ will represent a placeholder in your string
 
@@ -132,4 +135,8 @@ print("Hello %s" % (name))
 * string formatting
 	* not enough arguments (more placeholders than values) &rarr;
 	* not all arguments converted (more values than placeholders) &rarr;
+</section>
+
+<section markdown="block">
+## [Built-In Modules In Depth!](modules.html)
 </section>
