@@ -451,34 +451,54 @@ f | f | t              f | f | t
 
 <section markdown="block">
 ### De Morgan's Law 
-__How can we rewrite this fragment of code from {{ site.bookt }}?__&rarr; 
+
+__How can we rewrite this fragment of code from {{ site.bookt }}?__
+
+* so... we're writing a game where you fight dragons
+* you can only defeat the dragon if your magic sword is charged to 90% or higher
+* ...and your shield's energy is greater than 100
+
 
 {% highlight python %}
-# "suppose we can slay the dragon only if our magic lightsabre sword 
-# is charged to 90% or higher, and we have 100 or more energy units 
-# in our protective shield." 
-
 if not ((sword_charge >= 0.90) and (shield_energy >= 100)):
-    print("Your attack has no effect, the dragon fries you to a crisp!")
+    print("The dragon fries you to a crisp!")
 else:
-    print("The dragon crumples in a heap. You rescue the gorgeous princess!")
+    print("You defeat the dragon! You get all the treasures!")
 {% endhighlight %}
 
-<div class="incremental" markdown="block">
+__Can we simplify this using some combination of Demorgan's laws and/or logical opposites?__ &rarr;
+</section>
+
+<section markdown="block">
+### De Morgan's Law Continued
+
+__Let's rewrite this if statement__ &rarr;
+
 {% highlight python %}
-# first... demorgan's: 
-if not (sword_charge >= 0.90) or not (shield_energy >= 100):
+if not ((sword_charge >= 0.90) and (shield_energy >= 100)):
 	# ...
 {% endhighlight %}
 
+__First, let's try Demorgan's law...__&rarr;
+
+<div class="incremental" markdown="block">
 {% highlight python %}
-# next... logical opposites:
+if not (sword_charge >= 0.90) or not (shield_energy >= 100):
+	# ...
+{% endhighlight %}
+</div>
+
+<div class="incremental" markdown="block">
+__Next... logical opposites:__ &rarr;
+</div>
+
+<div class="incremental" markdown="block">
+{% highlight python %}
 if (sword_charge < 0.90) or (shield_energy < 100):
 	# ...
 {% endhighlight %}
 </div>
 </section>
-
 <section markdown="block">
 ## Truthiness and Style
 </section>
