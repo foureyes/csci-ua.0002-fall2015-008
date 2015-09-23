@@ -17,6 +17,18 @@
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
 
+Warm-up
+
+* larger of two rrrrectangles
+
+Homework #3 __Due Wednesday, Sep 30th, at 11PM__ 
+
+1. [grade.py](/homework/hw03/grade.py)
+2. [tip.py](/homework/hw03/tip.py)
+3. [adventure.py](/homework/hw03/adventure.py)
+4. [triangle_or_not.py](/homework/hw03/triangle_or_not.py)
+5. [worksheet.py](/homework/hw03/worksheet.py)
+
 {% comment %}
 Readings
 
