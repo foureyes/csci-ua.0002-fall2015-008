@@ -16,7 +16,7 @@
 * [About Class #7 - Midterm Exam Date](classes/07/meta.html)
 * [While Loops](classes/07/while.html)
 * [For Loops](classes/07/for.html)
-* [While Loops Revisited](classes/07/while-revisisted.html)
+* [While Loops Revisited](classes/07/while-revisited.html)
 
 {% comment %}
 * [Review](classes/07/review.html)
