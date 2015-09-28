@@ -13,10 +13,16 @@
 <article class="slides" markdown="block">
 #### Slides
 
-{% comment %}
-* [Slides](classes/01/intro.html)
-{% endcomment %}
+* [About Class #7 - Midterm Exam Date](classes/07/meta.html)
+* [While Loops](classes/07/while.html)
+* [For Loops](classes/07/for.html)
+* [While Loops Revisited](classes/07/while-revisisted.html)
 
+{% comment %}
+* [Review](classes/07/review.html)
+* [String Formatting](classes/07/string-formatting.html)
+* [Built-In Modules](classes/07/modules.html)
+{% endcomment %}
 </article>
 
 <article class="assignments" markdown="block">

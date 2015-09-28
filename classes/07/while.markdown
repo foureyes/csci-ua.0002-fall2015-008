@@ -8,24 +8,16 @@ title: While Loops
 </section>
 
 <section markdown="block">
-## Write a Program to Print out the numbers 1 through 9
+## Write a Program to Print out the numbers 1 through 5
 </section>
 
 <section markdown="block">
 ### Motivation for Loops
 
-A program to count from 1 to 9:
+A program to count from 1 to 5
 
 {% highlight python %}
 n, delta = 1, 1
-print(n)
-n = n + delta
-print(n)
-n = n + delta
-print(n)
-n = n + delta
-print(n)
-n = n + delta
 print(n)
 n = n + delta
 print(n)
@@ -47,7 +39,7 @@ __YES! ...using loops__
 
 {% highlight python %}
 n = 1
-end = 9
+end = 5
 delta = 1
 
 while n <= end:
