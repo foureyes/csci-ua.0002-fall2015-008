@@ -160,7 +160,7 @@ __What does this print out? &rarr;__
 {% highlight python %}
 keep_on_going = True
 while keep_on_going:
-	print("I'm going!)"
+	print("I'm going!")
 {% endhighlight %}
 
 <div class="incremental">
@@ -237,6 +237,17 @@ To change the outcome of your conditional:
 * examples:
 	* using operators to change a variable in your condition
 	* using input to change a variable in your condition
+</section>
+
+<section markdown="block">
+### Figuring Out How to Write a While Loop
+
+Before you write your while loop, __you should probably first determine__...
+
+* if your code needs a while loop _at all_ (is there repeated code)
+* if there's data that affects whether or not the loop will continue running
+* what condition will make your loop repeat
+* how your loop will end
 </section>
 
 
