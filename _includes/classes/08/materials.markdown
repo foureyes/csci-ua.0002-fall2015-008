@@ -1,6 +1,8 @@
 <article class="due" markdown="block">
 #### Due Today
 
+Homework #3
+
 {% comment %}
 * Homework
 {% endcomment %}
@@ -18,6 +20,19 @@
 
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
+
+Warm-up
+
+* break and continue
+* division until done (give me a number to divide by, with validation)
+
+Homework #4 __Due Wednesday, Oct 7th, at 11PM__ 
+
+1. [many_words.py](homework/hw04/many_words.py)
+2. [sticky.py](homework/hw04/sticky.py)
+3. [flagged.py](homework/hw04/flagged.py)
+4. [average_word.py](homework/hw04/average_word.py)
+5. [counting.py](homework/hw04/counting.py)
 
 {% comment %}
 Readings
