@@ -12,6 +12,9 @@ Homework #3
 <article class="slides" markdown="block">
 #### Slides
 
+* [Midterm #1 Sample Questions](resources/handouts/midterm_1/midterm_1_practice.pdf)
+* [Midterm #1 Sample Solutions](resources/handouts/midterm_1/midterm_1_practice_solutions.pdf)
+
 {% comment %}
 * [Slides](classes/01/intro.html)
 {% endcomment %}
