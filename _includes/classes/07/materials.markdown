@@ -28,6 +28,8 @@
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
 
+* Complete the [Self Paced-Learning Module #5]({{ site.module5 }})
+* Take quiz #5 on NYU Classes
 {% comment %}
 Readings
 

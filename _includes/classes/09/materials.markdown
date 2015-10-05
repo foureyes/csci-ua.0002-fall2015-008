@@ -1,6 +1,9 @@
 <article class="due" markdown="block">
 #### Due Today
 
+* [Self Paced-Learning Module #5]({{ site.module5 }})
+* Quiz #5 on NYU Classes
+
 {% comment %}
 * Homework
 {% endcomment %}
@@ -9,6 +12,11 @@
 
 <article class="slides" markdown="block">
 #### Slides
+
+* [About Class #9](classes/09/meta.html)
+* Continuing [For Loops From the Previous Class](classes/08/for.html)
+* [While Loops vs For Loops](classes/09/vs.html)
+* [Loop Exercises](classes/09/loop-exercises.html)
 
 {% comment %}
 * [Slides](classes/01/intro.html)

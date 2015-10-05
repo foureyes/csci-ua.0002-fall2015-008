@@ -13,31 +13,16 @@ title: Meta
 * finishing up for loops / for loop review
 * while vs for
 * all exercises, _all the time_
-* (optionally) nested loops
 </section>
 
 <section markdown="block">
 ### Homework
 
-* [Homework #2](../../schedule.html#homework2) 
-	* grades have been posted
-	* please see comments
-	* please get in touch with me if you have any questions 
-* [Homework #4](../../schedule.html#homework4) 
-	* due on Friday!
-	* __at 7pm__
-	* __no grace period__
+Grades for homework 2 and 3 will be posted on Tuesday.
+
+Homework #4 is due on Wednesday!
 </section>
 
-<section markdown="block">
-### Homework Continued
-
-* __solutions__ - we got 'em
-	* solutions for homeworks #1, #2, and #3 will be posted this evening
-	* solutions for homework #4 will be posted Friday evening
-* __grades__ for homework #3 should be up by the weekend
-
-</section>
 
 {% comment %}
 <section markdown="block">
@@ -233,32 +218,11 @@ main()
 
 Coming up soon!
 
-* The __first midterm__ is on Tuesday, __March 3rd__
+* The __first midterm__ is on Tuesday, __October 13th!__
 	* __THAT'S NEXT WEEK__
-* We'll have a review in-class this Thursday:
-	* I'll send out a practice exam this evening
+* Rather than a workshop, we'll have a review in-class this Wednesday
+	* Practice exam was posted under class 8
 	* We'll discuss during the in-class review
-* I will also hold an additional out-of-class review on Friday, __Feb 27th__
-	* __please let me know if you're planning on attending__
 </section>
 
 
-<section markdown="block">
-## [Doubleback to for loops (starting with range)](../08/for.html#15.0) or [for vs while](vs.html)
-</section>
-
-<!--
-<section markdown="block" class="title-slide">
-# Handout
-{% include title-slide-footer.html %}
-</section>
-
-
-<section markdown="block">
-### Boolean Logic, While Loops, For Loops
-
-* 20 minutes (Starts at 3:35, Ends at 3:55)
-* Above a certain threshhold, you'll get to skip similar materials
-* [Try this when you're done (it's easy!)](../../07/everything.html#4.0)
-</section>
--->
