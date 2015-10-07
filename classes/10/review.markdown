@@ -8,7 +8,91 @@ title: Midterm #1 Review
 </section>
 
 
+<section markdown="block">
+## About These Slides
 
+The first slides on formatting summarize the syntax of the format specifier and using print to format.
+
+The remainder of the slides are just parts of all of the previous slides stitched together.
+
+</section>
+
+<section markdown="block">
+### Formatting With Print
+
+* use keyword _arguments_ to define the separator between arguments and the character that gets printed at the end
+
+{% highlight python %}
+print('foo', 'bar', 'baz', sep=",", end="x")
+{% endhighlight %}
+
+</section>
+
+<section markdown="block">
+### Format Function 
+
+The format function takes 2 arguments: 
+
+* the value to be formatted
+* the format specifier (a string)
+
+The format function __returns a string__
+
+</section>
+
+<section markdown="block">
+### Format Function contintued
+
+The syntax for the second argument, the format specifier is as follows:
+
+{% highlight python %}
+[flags][width][.precision]type 
+{% endhighlight %}
+
+* some flags we used were &gt; and &lt; to specify where padding would be placed... and __,__ to specify that a comma should be included
+* width is the total width (number of characters returned)
+* __.__ and precision for number of decimal places
+* type... which is the type of the value that we're expecting to format 
+</section>
+
+<section markdown="block">
+### Types for Formatting
+
+These are some of the possible types that we can use in our format specifier:
+
+* __d__ - integer
+* __f__ - float
+* __s__ - string
+* __%__ - _percent_
+
+If the type you specify does not match the type of the value of the first argument, you'll get an error.
+
+{% highlight python %}
+format("2", ',d')
+#  ValueError: Unknown format code 'd' for object of type 'str'
+{% endhighlight %}
+
+
+</section>
+
+<section markdown="block">
+### Format Examples
+
+{% highlight pycon %}
+>>> format("2", '>10s')
+'         2'
+>>> format("hello", '>10s')
+'     hello'
+>>> format("hello", '<10s')
+'hello     '
+>>> format(2000.213, ',.1f')
+'2,000.2'
+>>> format(2000.213, '>20,.1f')
+'             2,000.2'
+>>> format(.2199, '.2%')
+'21.99%'
+{% endhighlight %}
+</section>
 
 <section markdown="block">
 ## Intro to Programming
@@ -1303,89 +1387,4 @@ __When should you use them? &rarr;__
 	* implement using for
 </section>
 
-
-<section markdown="block">
-## Functions!
-
-<!--_-->
-</section>
-
-<section markdown="block">
-### Some Definitions
-
-First off, __what's a function? &rarr;__
-
-<div class="incremental" markdown="block">
-* a named group of statements / _bunch of code_
-* that can optionally take 0 or more values as inputs (_parameters_ or _arguments_)
-* and can optionally return/produce a value as an output
-</div>
-</section>
-
-<section markdown="block">
-### Some More Definitions
-
-What's a __function call__, __parameter__ and __argument?__ &rarr;
- 
-<div class="incremental" markdown="block">
-* __calling__ a function - running or executing the function
-* __argument__ - a piece of data that is passed into a function
-* a __parameter__ - is a variable in a function that receives an argument that's passed
-	* within a function the values passed in can be referred to by parameter name
-</div>
-</section>
-
-
-<section markdown="block">
-### Greetings
-
-Create a function called __display\_loud\_greeting__ ...
-
-* this function will print out a greeting based on the __arguments__ that are passed to it
-* it should have two __parameters__, the name of the person to be greeted, and the number of exclamation points to add
-* it will display the greeting, "Hi", followed by the name, and finally some number of exclamation points
-* __example usage__:
-	* display_loud_greeting("Jasper", 4)
-	* ... will print out: Hi __Jasper!!!!__
-
-</section>
-
-
-<section markdown="block">
-### Greetings Implementation 
-
-Here's a possible implementation.  __If this were the only code in this program, what would the output be if we ran it?__ &rarr;
-
-{% highlight python %}
-def display_loud_greeting(name, num_exclamation_points):
-	greeting = "Hi " + name + num_exclamation_points * "!"
-	print(greeting)
-{% endhighlight %}
-
-<div class="incremental" markdown="block">
-{% highlight python %}
- 
-{% endhighlight %}
-
-Yup.  That's nothing.
-</div>
-</section>
-
-<section markdown="block">
-### Calling Greetings
-
-So.... __how do we call this function (let's use the arguments, Jasper and 4)?__ &rarr;
-
-{% highlight python %}
-def display_loud_greeting(name, num_exclamation_points):
-	greeting = "Hi " + name + num_exclamation_points * "!"
-	print(greeting)
-{% endhighlight %}
-
-<div class="incremental" markdown="block">
-{% highlight python %}
-display_loud_greeting("Jasper", 4)
-{% endhighlight %}
-</div>
-</section>
 

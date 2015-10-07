@@ -7,6 +7,30 @@ title: Loop Exercises
 {% include title-slide-footer.html %}
 </section>
 
+{% comment %}
+String concatentation. Roll two dice exactly 5 times. Write out the number of each roll, and the sum of each roll.
+
+	while loop, for loop version
+
+Roll it 100 times, is an easy for or a hard four more difficult to get?
+
+	while loop, for loop
+
+How about rolling it until we get a hard four?
+
+	only while loop?
+
+This time, let's control the numbers ask the user how many times they want to roll the dice?
+
+	while and for
+
+How about roll forever until they type stop?
+
+	only while loop
+
+How about building ladder with random... add constructing ...
+{% endcomment %}
+
 <section markdown="block">
 ### Fours and Roots
 

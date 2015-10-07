@@ -153,23 +153,20 @@ for num in range(10)
 
 * the exam content __is from__:
 	* the __slides__ 
+	* the __modules__ 
 	* the __homework__ 
-	* ... and to a lesser extent, the corresponding __readings__ from {{ site.bookq }}
-* if it was not covered in class or in the homework, it will not be in the exam
-	* for example, value returning functions in Chapter 5
-	* etc.
+	* ... the corresponding __readings__ from {{ site.bookq }}
+* if it was not covered in class, homework, or the modules/quizzes, it will not be in the exam
 </section>
 
 <section markdown="block">
 ### Topics from Slides
 
-__The slides are the best source of material for what was covered in class.__
-
 * all topics in the slides from classes __1__ through __10__
 * check out the __definitions__ in the slides (they're usually __bolded__)
 * check out the __sample problems__ in the slides
 * the built-in functions that were in the homework (and that appeared in slides that we did not go over) __may be in the exam__
-* the following topics from the slides __will not__ be in the exam:
+* the following topics from the slides (and modules) __will not__ be in the exam:
 	* inherent truth values
 	* nested loops (we never had a chance to cover this)
 </section>
@@ -191,9 +188,6 @@ __The exam will cover material from Chapters 1 through 5 in the book.__
 * Ch. 3 - Decision Structures and Boolean Logic - all sections
 * Ch. 4 - Repetition Structures 
 	* __except__ 4.7 on nested loops
-* Ch. 5 - Simple Functions 
-	* up to, and including 5.9
-	* __except, skip__ 5.8 (writing _your own_ value returning functions)
 </section>
 
 <section markdown="block">

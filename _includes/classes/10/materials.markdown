@@ -10,6 +10,19 @@
 <article class="slides" markdown="block">
 #### Slides
 
+* [About Midterm #1](classes/10/exam.html)
+* [Review (Variables, Statements, Expressions, Types, Operators, Loops, Conditionals)](classes/10/review.html)
+
+### Handouts
+* [Sample Questions for Midterm #1](resources/handouts/midterm_1/midterm_1_practice.pdf)
+* [Sample Questions for Midterm #1 Solutions](resources/handouts/midterm_1/midterm_1_practice_solutions.pdf)
+
+### Out-of-class Review
+
+* Room TBD (Probably WWH201)
+* 10/08/2015
+* 6:30PM- 7:15PM
+
 {% comment %}
 * [Slides](classes/01/intro.html)
 {% endcomment %}
@@ -18,6 +31,8 @@
 
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
+
+
 
 {% comment %}
 Readings
