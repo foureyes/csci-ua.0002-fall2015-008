@@ -16,6 +16,7 @@
 ### Handouts
 * [Sample Questions for Midterm #1](resources/handouts/midterm_1/midterm_1_practice.pdf)
 * [Sample Questions for Midterm #1 Solutions](resources/handouts/midterm_1/midterm_1_practice_solutions.pdf)
+* [Additional Sample Questions for Midterm #1](resources/handouts/midterm_1/midterm_1_additional_practice.pdf)
 
 ### Out-of-class Review
 
