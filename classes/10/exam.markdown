@@ -174,7 +174,7 @@ for num in range(10)
 <section markdown="block">
 ### Topics from the Book
 
-__The exam will cover material from Chapters 1 through 5 in the book.__
+__The exam will cover material from Chapters 1 through 4 in the book.__
 
 * Ch. 1 - Introduction to Computers and Programming - all sections
 * Ch. 2 - Input, Processing, and Output 
