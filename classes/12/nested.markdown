@@ -148,8 +148,9 @@ Please enter a pasword length (0 to exit)
 <section markdown="block">
 ### Password Generator
 
-Continually ask the user for a number.
+Create a program that generates passwords! The passwords only consist of digits, though...
 
+* continually ask the user for a number
 * if the number is 0, stop asking
 * if the number is not 0, generate a password:
 	* the number entered will specify how many characters are in the password
