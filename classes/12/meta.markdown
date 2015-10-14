@@ -17,8 +17,9 @@ title: About Class #12
 <section markdown="block">
 ### Quizzes and Homework 
 
-* Quiz 6 and Module 6 due on Monday
-* Homework to be posted this weekend, but due Monday, 22nd (will be slightly longer)
+* Quiz 6 and Module 6 due on Monday (posted this afternoon)
+* Homework to be posted by the end of this week, but will be due Sunday, the 21st... with only 12 hour grace period 
+* (think homework will be slightly longer, as it will cover both nested loops and functions)
 
 </section>
 
