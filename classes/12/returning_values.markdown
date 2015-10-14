@@ -138,10 +138,7 @@ def <function_name>(<zero_or_more_parameters>):
 </section>
 
 <section markdown="block">
-### The Header Line
-<aside>A Closer Look</aside>
-
-The beginning of a function consists of:
+### The Function Header
 
 1. the keyword, __def__ (this never changes)
 2. followed by the function's name
@@ -151,7 +148,7 @@ The beginning of a function consists of:
 	* can just be () if no parameters are required
 	* multiple parameters are separated by commas
 	* the parameters specify what information must be provided to the function
-4. lastly, a colon to signify the end of the header line
+4. a colon to signify the end of the header line
 </section>
 
 <section markdown="block">
@@ -173,6 +170,8 @@ The __body__ of a function:
 * the values that were passed in as arguments in the call to the function:
 	* can be accessed by the parameter names
 	* these names correspond to the position that they were in when the function was called
+* an optional __return__ statement that specifies to the function that it should give back a value
+* (most of the functions we write will have a return statement)
 </section>
 
 <section markdown="block">
@@ -318,7 +317,7 @@ def greet():
 
 __If this is the only code in your program, and you run it, what will be printed to the screen?  Something, nothing, or an error? &rarr;__
 {% highlight python %}
-greet()
+print(greet())
 
 def greet():
 	return 'hello'
@@ -396,12 +395,30 @@ Sometimes you'll see a function called main() within a program
 
 * we can create _fruitful_ functions, that is... functions that return a value
 * define a function using __def__, and just use the keyword __return__, followed by the value that you want to give back
+* (you might have noticed the keyword, __return__ in previous examples)
 
 {% highlight python %}
 def greet(greeting, num):
 	s = greeting * num
 	return s
 {% endhighlight %}
+</section>
+
+<section markdown="block">
+### Without Return (None)
+
+In this example, we do not have a return statement. This is still syntactically valid, but...
+
+{% highlight python %}
+def greet(greeting, num):
+	s = greeting * num
+
+print(greet('hello', 5)
+{% endhighlight %}
+
+If you omit return, you'll get a special value back: __None__. This prints out None to the screen!
+
+__None__ is a value that means the absence of a value!
 </section>
 
 <section markdown="block">

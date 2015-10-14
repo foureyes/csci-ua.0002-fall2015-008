@@ -7,7 +7,6 @@ nav-state: schedule
 
 Schedule & Notes
 ====
-{% comment %}
 Jump to Class:
  [09/02](#class1),
  [09/09](#class2),
@@ -20,7 +19,8 @@ Jump to Class:
  [10/05](#class9),
  [10/07](#class10),
  10/13 (midterm #1),
- [10/14](#class12),
+ [10/14](#class12)
+{% comment %}
  [10/19](#class13),
  [10/21](#class14),
  [10/26](#class15),
@@ -211,8 +211,9 @@ Jump to Class:
 #### Topics
 
 * For Loops Continued
-* For vs While
 * Nested Loops
+* Writing Your Own Functions 
+
 </article> {% include classes/12/materials.markdown %} </div> </section> 
 
 
@@ -238,7 +239,7 @@ Jump to Class:
 <article class="topics" markdown="block">
 #### Topics
 
-* Writing Your Own Functions!
+* Writing Your Own Functions Continued
 * Scope
 </article> {% include classes/14/materials.markdown %} </div> </section> 
 
