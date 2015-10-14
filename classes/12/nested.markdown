@@ -126,9 +126,9 @@ while number_of_cheers > 0:
 </section>
 
 <section markdown="block">
-### Password Generator Recap
+### Password Generator
 
-Below is the output of a program that generates passwords based on a number that is input by the user.  It's similar to the cheers example.
+Below is the output of a program that generates passwords based on a number that is input by the user. It's similar to the cheers example.
 
 {% highlight python %}
 Please enter a pasword length (0 to exit)
@@ -143,6 +143,18 @@ Please enter a pasword length (0 to exit)
 Please enter a pasword length (0 to exit)
 >0
 {% endhighlight %}
+</section>
+
+<section markdown="block">
+### Password Generator
+
+Continually ask the user for a number.
+
+* if the number is 0, stop asking
+* if the number is not 0, generate a password:
+	* the number entered will specify how many characters are in the password
+	* each character is a randomly generated digit from 0 through 9
+* for example, if the user enters 4, a password that may be generated is: 3084
 </section>
 
 <section markdown="block">
