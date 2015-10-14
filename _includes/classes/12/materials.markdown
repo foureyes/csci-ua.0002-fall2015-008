@@ -10,7 +10,15 @@
 <article class="slides" markdown="block">
 #### Slides
 
+* [About Class #12](classes/12/meta.html)
+* [String Formatting with %](classes/12/string-formatting.html)
+* [Nested Loops](classes/12/nested.html)
+* [Creating Functions](classes/12/returning_values.html)
+* [Dicewars](classes/12/dicewars.html)
+
 {% comment %}
+* [Functions no Return](classes/12/functions_no_return.html)
+* [Calling Functions](classes/12/calling_functions.html)
 * [Slides](classes/01/intro.html)
 {% endcomment %}
 
@@ -18,6 +26,9 @@
 
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
+
+* Complete the [Self Paced-Learning Module #6]({{ site.module6 }})
+* Take quiz #6 on NYU Classes
 
 {% comment %}
 Readings
