@@ -485,6 +485,3 @@ XX
 </section>
 -->
 
-<section markdown="block">
-### [Looping Over Strings Preview](loop-strings-preview.html)
-</section>

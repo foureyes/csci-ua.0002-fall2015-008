@@ -1,23 +1,41 @@
 <article class="due" markdown="block">
 #### Due Today
 
-{% comment %}
 * Homework
-{% endcomment %}
 
 </article>
 
 <article class="slides" markdown="block">
 #### Slides
 
-{% comment %}
-* [Slides](classes/01/intro.html)
-{% endcomment %}
+* [IPO Charts and Exercises](classes/13/ipo_function_exercises.html)
 
 </article>
 
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
+
+Warm-up
+
+* oh hey, remember modules?
+* if \_\_name\_\_ == '\_\_main\__':
+* input/output/processing
+* functions with and without return
+
+Homework #4 __Due Sunday, Oct 25th, at 11PM__ (+12 hour grace period)
+
+1. [funcynum.py](homework/hw05/funcynum.py)
+	* [instructions only](homework/hw05/funcynum.html)
+2. [feeling_quizzy.py](homework/hw05/feeling_quizzy.py)
+	* [instructions only](homework/hw05/feeling_quizzy.html)
+3. [snake_eyes.py](homework/hw05/snake_eyes.py)
+4. [analyze_numbers.py](homework/hw05/analyze_numbers.py)
+
+Module #7 __Due Monday, Oct 26th, before class__
+
+* (it'd probably good if you got through some of the material by Wednesday's class, though)
+* Complete the [Self Paced-Learning Module #7]({{ site.module7 }})
+* Take quiz #7 on NYU Classes
 
 {% comment %}
 Readings
