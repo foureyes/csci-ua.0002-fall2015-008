@@ -10,7 +10,17 @@
 <article class="slides" markdown="block">
 #### Slides
 
+
+* [About Class #14](classes/14/meta.html)
+* [Functions: Assertions and Testing](classes/14/functions_assertions_testing.html)
+* [Scope](classes/14/scope.html)
+* [Recursion](classes/14/recursion.html)
+* [Strings](classes/14/strings.html)
+* [As a list of chars](classes/14/strings_as_list.html)
+
+
 {% comment %}
+* [Objects and Methods](classes/14/objects_and_methods.html)
 * [Slides](classes/01/intro.html)
 {% endcomment %}
 
@@ -32,8 +42,8 @@ Assignments
 {% comment %}
 <a name="class14"></a>
 
-###Slides
-* [About Class #14](classes/14/meta.html)
+
+
 * [Loops Recap](classes/14/loops.html)
 * [Turtle Review](classes/14/turtle_review.html)
 * [Returning Values](classes/14/returning_values.html)

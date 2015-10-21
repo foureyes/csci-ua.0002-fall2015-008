@@ -1,6 +1,6 @@
 ---
 layout: slides
-title: Scope 
+title: Scope
 ---
 <section markdown="block" class="title-slide">
 # Scope
@@ -8,67 +8,79 @@ title: Scope
 </section>
 
 <section markdown="block">
-### Accessing a Variable Outside of a Function 
+### Global Variables and Function Definitions
 
-__What do you think will happen here?  Will something be printed out?  Nothing?  Or an error?__
+__In the following program, will something be printed out, nothing, or an error... and why?__ &rarr;
 
 {% highlight python %}
 {% include classes/15/scope1.py %}
 {% endhighlight %}
 
 <div class="incremental" markdown="block">
-Oddly... it's fine.  Something is printed out.  It seems like the function has access to s, which was declared outside of the function. 
+__s is a global variable__.  It is accessible everywhere, including the function body. 
 </div>
 </section>
 
 <section markdown="block">
-### How About Variables Declared Inside a Function?
+### Variables Declared Inside a Function
 
-__What do you think will happen here?  Will something be printed out?  Nothing?  Or an error?__
+__In the following program, will something be printed out, nothing, or an error... and why?__ &rarr;
 
 {% highlight python %}
 {% include classes/15/scope2.py %}
 {% endhighlight %}
 
 <div class="incremental" markdown="block">
-Uh-oh.  Looks like you can't access variables that are inside a function.
+An error occurs because s is inaccessible outside of the function definition.  __s is local to the function that it was defined in.__
 </div>
 </section>
 
 <section markdown="block">
-### How About Parameters?
+### Parameters
 
-__What do you think will happen here?  Will something be printed out?  Nothing?  Or an error?__
+__In the following program, will something be printed out, nothing, or an error... and why?__ &rarr;
 
 {% highlight python %}
 {% include classes/15/scope2b.py %}
 {% endhighlight %}
 
 <div class="incremental" markdown="block">
-This is the same as the previous slide.  You can't access the parameters (by their name) that you passed in to the function from outside of the function.
+An error occurs.  You can't access the parameters (by their name) that you passed in to the function from outside of the function.  __Parameters are local to their function.__
 </div>
 </section>
 
 <section markdown="block">
-### And Lastly... 
+### Precedence
 
-__What do you think will happen here?  Will something be printed out?  Nothing?  Or an error?__
+__In the following program, will something be printed out, nothing, or an error... and why?__ &rarr;
 
 {% highlight python %}
 {% include classes/15/scope3.py %}
 {% endhighlight %}
 
 <div class="incremental" markdown="block">
-Hmmm... it looks like names created within a function are _local_ to that function.  They don't override names in the global space.
+Variables _created_ within a function are _local_ to that function.  A function will use a __local__ variable before global.  In this case, it will use the _local_ variable, s, instead of the global variable, s.
 </div>
 </section>
 
 <section markdown="block">
-### What Does This All Mean?
+## A Quick Explanation
+</section>
 
-A __scope__ holds the current set of available names (variables) and the values that they point to.  
+<section markdown="block">
+### Scope
 
-* anything that we define in the top level of indentation our program is said to be in the __global scope__
+A __scope__: 
+
+* determines where a variable is accessible
+* it holds the current set of all available names and the values that they refer to
+
+</section>
+
+<section markdown="block">
+### Global Scope
+
+* anything that we define in the top level of indentation in our program is said to be in the __global scope__
 * in the following example, the variables _a_ and _b_ are in the __global scope__
 * they can be accessed from anywhere, even within the function
 
@@ -76,16 +88,15 @@ A __scope__ holds the current set of available names (variables) and the values 
 a, b = 25, "something"
 
 def foo():
-	c = "bar"
+	print(a)
 	print(b)
-	print(c)
-# what will this print out?
+
 foo()
 {% endhighlight %}
 </section>
 
 <section markdown="block">
-### Scope
+### Local Scope
 
 Variables that are defined in your function (one indentation level in), however, are only available within your function.  They are _local_ to that function.  The example below won't work.
 
@@ -100,9 +111,9 @@ print(c)
 </section>
 
 <section markdown="block">
-### Scope Continued
+### Local Scope Continued
 
-Furthermore, variables that are declared within a function that have the same name as a global variable are totally different variables/values!  They don't overwrite the outer, global variable (there's a way to do this, though).  What will this print?
+Variables that __are declared__ (created) within a function that have the same name as a global variable are totally different variables/values!  They don't overwrite the outer, global variable (there's a way to do this, though).  What will this print?
 
 {% highlight python %}
 c = "on toast"
@@ -119,73 +130,108 @@ print(c)
 grape jelly
 on toast
 {% endhighlight %}
+
+[Obligatory Python tutor version](http://www.pythontutor.com/visualize.html#code=c+%3D+%22on+toast%22%0Adef+foo()%3A%0A%09c+%3D+%22grape+jelly%22%0A%09print(c)%0A%0Afoo()%0Aprint(c)&mode=display&cumulative=true&heapPrimitives=false&drawParentPointers=false&textReferences=false&showOnlyOutputs=false&py=3&curInstr=0)
 </div>
 </section>
 
 <section markdown="block">
+## A Little More Detail on That Last Point
+</section>
+
+<section markdown="block">
+### What's (not) in a Name?
+
+
+__What is the exact error that you get if you try to use a variable, function or module that you haven't created yet?__ &rarr;
+
+<div class="incremental" markdown="block">
+NameError (__Let's try it__ &rarr;)
+</div>
+</section>
+
+{% comment %}
+<section markdown="block">
+### Objects
+
+
+__What is the the definition of an object again?__ &rarr;
+
+<div class="incremental" markdown="block">
+* a _thing_ that a _variable name_ can refer to
+* an object can have attributes (data)
+* an object can have methods (actions)
+</div>
+</section>
+
+<section markdown="block">
+## An Object is a Thing That a Variable Name Can Refer To
+</section>
+
+<section markdown="block">
+### Objects and Names
+
+__What operator would you use to create a new variable name and bind a value / object to that name (that is, how do you make a name refer to an object)?__ &rarr;
+
+<div class="incremental" markdown="block">
+* equals (=)
+* my_variable_name = "some value"
+</div>
+</section>
+{% endcomment %}
+
+<section markdown="block">
+### Creating Names
+
+* when you create a variable in a function, you're actually creating a name in the local scope
+* if there's a global variable that happens to be the same name, it is not affected!
+
+</section>
+
+<section markdown="block">
+### Finding Names
+
+If you use a variable name in a function, __it will try to find that name in the following places in order__:
+
+* __local__ scope (variables defined in the function)
+* __enclosing functions' locals__ (function can be defined within function definitions - we won't be using this, though)
+* __global scope__ (variables defined in the top-level of your file)
+* __built-ins__ (all of the built-in functions and variables that are available when Python starts)
+
+</section>
+<section markdown="block">
+### And So?
+
+__What does the following code print out?__
+
+{% highlight python %}
+color = "blue"
+
+def my_test_function():
+
+	color = "orange"
+	print(color)
+
+my_test_function()
+print(color)
+{% endhighlight %}
+
+<div class="incremental" markdown="block">
+{% highlight python %}
+orange
+blue
+{% endhighlight %}
+</div>
+</section>
+
+
+<section markdown="block">
 ### Scope Summary
 
-* variables declared outside of a function can be accessed within a function
-* variables declared inside of a function cannot be accessed outside of a function (they're __out of scope__)
-* parameters in a function cannot be accessed outside of a function either
-* variables declared within a function don't override those declared outside of a function
-</section>
-
-
-<section markdown="block">
-### A Quick Look At Turtle
-
-There's a small difference between these two functions.  __What is it?  Do both functions _work_?__
-
-Program 1:
-
-{% highlight python %}
-# other setup code implied
-t = turtle.Turtle()
-def draw_blue_line(length):
-	t.color('blue')
-	t.forward(length)
-{% endhighlight %}
-
-Program 2:
-
-{% highlight python %}
-# other setup code implied
-t = turtle.Turtle()
-def draw_blue_line(t, length):
-	t.color('blue')
-	t.forward(length)
-{% endhighlight %}
-</section>
-
-<section markdown="block">
-### Turtle Continued
-
-* both functions work fine
-* the first snippet of code relies on a turtle named t to exist outside of a function definition
-* what if we had two turtles that we wanted to use the function on?  
-* we'd have to pass the turtle in, otherwise the function would only be good for one turtle
-</section>
-
-<section markdown="block">
-### Two Turtles 
-
-__(btw, what would happen if I didn't pass in t?  let's try it...)&rarr;__
-{% highlight python %}
-import turtle
-def draw_blue_line(t, length):
-	t.color('blue')
-	t.forward(length)
-wn = turtle.Screen()
-don = turtle.Turtle()
-leo = turtle.Turtle()
-
-don.up()
-don.goto(100, 100)
-don.down()
-
-draw_blue_line(don, 200)
-draw_blue_line(leo, 100)
-wn.mainloop()
-{% endhighlight %}
+* __global scope__ - variables and function definitions declared outside of a function; can be accessed everywhere - from current file or within function definition 
+* __local scope__ - variables declared inside of a function; cannot be accessed outside of the function they are created in
+* __parameters are local to their function__ - parameters in a function cannot be accessed outside of a function either
+* __local variables declared (created) with the same name as a global variable__:
+	* are accessed first if referenced in the function definition 
+	* does not change value of global variables
 </section>

@@ -376,6 +376,3 @@ False
 	* hint: build a string by accumulating characters
 </section>
 
-<section markdown="block">
-## [Strings as Objects, Methods, Functions](objects_and_methods.html)
-</section>

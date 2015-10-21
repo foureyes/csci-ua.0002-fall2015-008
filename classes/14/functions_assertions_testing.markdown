@@ -301,7 +301,3 @@ def join_three_strings(a, b, c):
 
 In later classes, we'll see where this string shows up, but for now just use it as inline documentation for your code.
 </section>
-
-<section markdown="block">
-## [Scope](scope.html)
-</section>

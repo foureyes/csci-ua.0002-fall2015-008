@@ -122,6 +122,3 @@ __Let's try to draw a tree using recursion. &rarr;__
 * Recursive programs 
 </section>
 -->
-<section markdown="block">
-## [Strings](strings.html)
-</section>

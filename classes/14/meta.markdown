@@ -11,24 +11,20 @@ title: About Class #14
 <section markdown="block">
 ### Topics
 
-* last bit about loops...
-* turtle review
-* __functions that return values__
+* testing and documentation
+* scope
+* strings
 
 </section>
 
 {% comment %}
 <section markdown="block">
-### Midterm Results
+### Midterms
 
-Grades were posted last week.
+Grades should be posted by next Monday
 
-* 55 points total, 2 point extra credit
-* both the average and the median were around 46 ~ 48 points out of a possible 55
-* average was 84%, median was 89%
-* exam difficulty increases slightly for midterm #2 and the final
-* see [midterm #1 solutions](../../resources/handouts/midterm_1_solutions.pdf)
-
+* will curve up if average is below 80
+* (typically average is above 80)
 
 </section>
 {% endcomment %}
@@ -36,10 +32,9 @@ Grades were posted last week.
 <section markdown="block">
 ### Homework
 
-* homework #5 is due this evening!
-* homework #6 to be posted on Friday evening
-	* due __after__ Spring break
-	* (likely Thursday)
+* homework #5 is due on Sunday 
+* (only 12 hour grace period)
+* questions about homework?
 
 </section>
 
@@ -74,7 +69,3 @@ Grades were posted last week.
 	
 </section>
 {% endcomment %}
-
-<section markdown="block">
-## [Loops (Last Bit, Really)](loops.html)
-</section>
