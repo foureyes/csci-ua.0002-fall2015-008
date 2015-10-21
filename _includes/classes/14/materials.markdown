@@ -17,6 +17,7 @@
 * [Recursion](classes/14/recursion.html)
 * [Strings](classes/14/strings.html)
 * [As a list of chars](classes/14/strings_as_list.html)
+* Evaluations
 
 
 {% comment %}

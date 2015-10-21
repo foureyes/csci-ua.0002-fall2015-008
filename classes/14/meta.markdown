@@ -13,7 +13,9 @@ title: About Class #14
 
 * testing and documentation
 * scope
+* recursion (maybe)
 * strings
+* evaluations!
 
 </section>
 
