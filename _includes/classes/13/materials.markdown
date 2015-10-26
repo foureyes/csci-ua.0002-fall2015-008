@@ -22,7 +22,7 @@ Warm-up
 * input/output/processing
 * functions with and without return
 
-Homework #4 __Due Sunday, Oct 25th, at 11PM__ (+12 hour grace period)
+Homework #5 __Due Sunday, Oct 25th, at 11PM__ (+12 hour grace period)
 
 1. [funcynum.py](homework/hw05/funcynum.py)
 	* [instructions only](homework/hw05/funcynum.html)
