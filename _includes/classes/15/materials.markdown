@@ -17,9 +17,9 @@
 Warm-up
 
 * "sequence" types
-* review unicode, chr, ord
 * indexing and slicing
-* string methods
+* string methods, functions
+* review unicode, chr, ord
 
 Homework #6 __Due Sunday, Nov 1st, at 11PM__ (+12 hour grace period)
 
