@@ -13,7 +13,7 @@ title: String Objects, String Methods
 __What's an object?  What's a method?  Give some examples. &rarr;__
 
 <div class="incremental" markdown="block">
-* __object__ - a _thing_ that a variable name can refer to, like a screen, turtle, string or integer
+* __object__ - a _thing_ that a variable name can refer to, like a string or integer
 * for us that means attributes (data) and methods (functions)... all packed into one thing
 * a __method__ is essentially a function that's associated with a particular object
 * a __methods__ can be thought of as an action behavior that an object can perform
@@ -23,88 +23,124 @@ __What's an object?  What's a method?  Give some examples. &rarr;__
 <section markdown="block">
 ### Calling Methods
 
-How do you call a method?  For example, if you had a turtle object that's named leo, __how would you call the forward method on it to tell it to move forward 100 pixels? &rarr;__
+How do you call a method?  For example, if you had a string named food, that contains the value "pizza", __how would you call the upper method on it to tell it to give back an uppercase version of itself? &rarr;__
 
 {% highlight python %}
-leo = Turtle()
-# tell leo to move forward
+food = "pizza"
+# tell food to give back an uppercase version of itself
 {% endhighlight %}
 
 <div class="incremental" markdown="block">
 {% highlight python %}
-leo = Turtle()
-leo.forward(100)
+leo.upper()
 # use the object name
 # followed by dot
 # and the method (from here, it's like a regular function)
+# notice that upper has no arguments
 {% endhighlight %}
 </div>
 </section>
 
 <section markdown="block">
-### Strings as Objects!
+### Strings Methods!
 
-Yes __strings__ are objects too (just like turtle)  Here are some methods.  __Let's try them out! &rarr;__
+Strings are objects. They have methods. Lots of 'em!
 
 1. __upper__() 
 2. __lower__()
-3. __isdigit__()
-4. __isalpha__()
-5. __find__(sub[, start[, end]])
-6. __format__(...)
-7. __strip__([chars])
-8. __isupper__()
-9. __islower__()
+3. __capitalize__()
+4. __title__()
+5. __isdigit__()
+6. __isnumeric__()
+7. __isalpha__()
+8. __isspace__()
 
+__to be continued in next slide!__ &rarr;
 </section>
 
 <section markdown="block">
-### upper() and lower()
+## Even More String Methods!
 
-__upper__() and __lower__() return the string that the method was called on in either all uppercase or all lowercase.  __What would the following print out? &rarr;__
+1. __find__(sub[, start[, end]])
+2. __format__(...)
+3. __strip__([chars])
+4. __isupper__()
+5. __islower__()
+6. __count__(...)
+7. __replace__(...)
+
+<br>
+In the interactive shell, you could use the __dir__ with a string in parentheses to show all of the methods of an object:
+
+
+{% highlight python %}
+dir("some string")
+{% endhighlight %}
+</section>
+
+<section markdown="block">
+### Casing Methods
+
+__upper__(), __lower__(), __capitilize__(), and __title__() return the string that the method was called on as all uppercase, all lowercase, first letter uppercase, and title-cased (first letter of every word uppercase).  __What would the following print out? &rarr;__
 
 {% highlight python %}
 print("this should be uppercase".upper())
 print("THIS SHOULD BE LOWERCASE".lower())
+print("this should be uppercase".capitalize())
+print("this should be uppercase".title())
 {% endhighlight %}
 
 <div class="incremental" markdown="block">
 {% highlight python %}
 THIS SHOULD BE UPPERCASE
 this should be lowercase
+This should be uppercase
+This Should Be Uppercase
 {% endhighlight %}
 </div>
 </section>
 
 <section markdown="block">
-### isdigit() and isalpha()
+### isdigit(), isnumeric() and isalpha()
 
-__isdigit__() and __isalpha__() test whether a string is only numbers or letters (both return False if empty string).  __What would the following print out? &rarr;__
+__isdigit__(), __isnumeric__() and __isalpha__() test whether a string is __only__ composed of all numbers or all letters (all three return False if empty string).  __What would the following print out? &rarr;__
+
+\* __isnumeric__() also returns true for numeric characters other than 0-9, such as '⅕'.
 
 {% highlight python %}
-print("123".isdigit())
-print("1.23".isdigit())
-print("one two three".isdigit())
-print("onetwothree".isalpha())
-print("one two three".isalpha())
-print("one!".isalpha())
-print("1".isalpha())
+print("123".isdigit())            # True
+print("1.23".isdigit())           # False (. is not 0 - 9)
+print("one two three".isdigit())  # False (not 0 - 9)
+print("onetwothree".isalpha())    # True
+print("one two three".isalpha())  # False (has spaces)
+print("one!".isalpha())           # False (has !)
+print("1".isalpha())              # False (it's a digit)
+print("⅕".isdigit())              # False (not 0 - 9)
+print("⅕".isnumeric())  # True (isnumeric allows other numeric chars)
+{% endhighlight %}
+
+</section>
+
+
+<section markdown="block">
+### isspace()
+
+__isspace__() gives back true if all of the characters in the string it's called on is white space - any kind of _white space_. __What is the output of the following?__ &rarr;
+
+{% highlight python %}
+print("             ".isspace())
+print("\n".isspace())
+print("some    space".isspace())
 {% endhighlight %}
 
 <div class="incremental" markdown="block">
 {% highlight python %}
 True
-False
-False
 True
-False
-False
 False
 {% endhighlight %}
 </div>
 </section>
-
-
 
 <section markdown="block">
 ### find()
@@ -192,6 +228,22 @@ True
 
 
 <section markdown="block">
+### count(), replace()
+
+__count__(s) ...counts the number of times substring, s, occurs in the original string.
+
+{% highlight python %}
+'aardvark'.count('a') # --> 3
+{% endhighlight %}
+
+__replace__(s, new_s) ...replaces all occurrences of substring, s, with new_s. (note that this gives back a __new string__, and it does not change the original)
+
+{% highlight python %}
+'aardvark'.replace('a', '42') # --> 4242rdv42rk
+{% endhighlight %}
+</section>
+
+<section markdown="block">
 ### A Couple of Exercises:
 
 * use upper or lower to check for permutations for input
@@ -199,8 +251,4 @@ True
 	* ask the user if they want the loop to stop
 	* accept "Yes", "YES", "yes", etc.
 * rewrite get_first_word, but use __find__() instead of a loop
-</section>
-
-<section markdown="block">
-## [Built-in String Functions](strings_built_in_functions.html)
 </section>

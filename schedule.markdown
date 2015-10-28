@@ -22,9 +22,9 @@ Jump to Class:
  [10/14](#class12),
  [10/19](#class13),
  [10/21](#class14),
- [10/26](#class15)
+ [10/26](#class15),
+ [10/28](#class16)
 {% comment %}
- [10/28](#class16),
  [11/02](#class17),
  [11/04](#class18),
  [11/09](#class19),
@@ -292,7 +292,8 @@ Jump to Class:
 <article class="topics" markdown="block">
 #### Topics
 
-* Graphics (Turtle Module)
+* Lists
+
 </article> {% include classes/18/materials.markdown %} </div> </section> 
 
 
@@ -306,6 +307,7 @@ Jump to Class:
 #### Topics
 
 * Lists
+* Graphics (Turtle Module)
 
 </article> {% include classes/19/materials.markdown %} </div> </section> 
 

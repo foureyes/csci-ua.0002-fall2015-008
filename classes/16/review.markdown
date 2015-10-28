@@ -280,7 +280,7 @@ def foo()
 <section markdown="block">
 ### Letter in Word (v1)
 
-__Try implementing this function!__ (there's a built-in construct that does this, and we'll see it later)
+__Try implementing this function!__ 
 
 * create an ipo chart
 * write assertion statements (how many?)
@@ -312,6 +312,23 @@ Here's another way of doing it using __break__.
 {% include classes/16/letter_in_word.py %}
 {% endhighlight %}
 </div>
+</section>
+
+<section markdown="block">
+### Letter in Word Revisited
+
+There are actually a couple of much easier ways to do this rather than writing our own function. __What are two ways of determining whether or not a string is a substring of another string?__ &rarr;
+
+<div class="incremental" markdown="block">
+{% highlight python %}
+# use the in operator:
+'a' in 'aardvark'
+
+# use the find method:
+'aardvark'.find('a')
+{% endhighlight %}
+</div>
+
 </section>
 
 <section markdown="block">
@@ -366,6 +383,20 @@ __Write a function that counts how many times a letter occurs in a word. &rarr;_
 {% highlight python %}
 {% include classes/17/count.py %}
 {% endhighlight %}
+
+</section>
+
+<section markdown="block">
+### Counting letters Revisited
+
+Just like finding a substring, there's a much easier way to find the number of times a substring occurs inside another string. __What is the method that let's us do this?__ &rarr;
+
+<div class="incremental" markdown="block">
+{% highlight python %}
+# it's just count!
+"banana".count('an')
+{% endhighlight %}
+</div>
 
 </section>
 
@@ -586,5 +617,18 @@ Create a function that determines whether or not a string only has numbers (0-9)
 </section>
 
 <section markdown="block">
-## [Strings as Objects](strings_as_objects.html)
+### Is Digit Revisited
+
+And of course, there's already a couple of methods that do this. __What are they?__ &rarr;
+
+<div class="incremental" markdown="block">
+{% highlight python %}
+"123".isdigit()
+"123".isnumeric()
+"abc".isdigit()
+"abc".isnumeric()
+{% endhighlight %}
+</div>
+
 </section>
+

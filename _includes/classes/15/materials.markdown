@@ -29,7 +29,6 @@ Homework #6 __Due Sunday, Nov 1st, at 11PM__ (+12 hour grace period)
 4. [secret_messages.py](homework/hw06/secret_messages.py)
 4. [string_practice.py](homework/hw06/string_practice.py)
 
-Module #8 __TBD__
 </article>
 
 {% comment %}

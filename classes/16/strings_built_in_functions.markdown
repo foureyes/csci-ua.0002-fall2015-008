@@ -98,6 +98,7 @@ Python has a couple of functions that translate code points to characters and ch
 * __chr__(i) - gives back the character corresponding to the supplied integer (code point) 
 </section>
 
+{% comment %}
 <section markdown="block">
 ### Caesar Cipher
 
@@ -314,3 +315,4 @@ If you find a message that's encrypted, __how can you tell that it was encrypted
 <section markdown="block">
 ## [Lists](lists_intro.html)
 </section>
+{% endcomment %}

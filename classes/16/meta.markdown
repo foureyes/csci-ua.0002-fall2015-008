@@ -1,76 +1,70 @@
 ---
 layout: slides
-title: About Class #16 
+title: About Class #17 
 ---
 <section markdown="block" class="title-slide">
-# About Class #16
+# About Class #17
 {% include title-slide-footer.html %}
 </section>
 
-<!--
 <section markdown="block">
-### Some Administrative Stuff
+### Topics
 
-* midterm grades
-* homework
-* today's topics
+In Depth...
+
+* Strings as Compound Data Types
+	* Every character in a string
+	* Slices
+	* In and Not In
+* Strings as Objects
+	* String Methods
+	* String Functions
 </section>
 
 <section markdown="block">
-### Midterm Grades
+### About the _Second_ Midterm
 
-* as mentioned last week...
-* __midterm grades__ posted, available in Albert
-	* homework is 25% of total grade (homeworks 1 through 4 only)
-	* exams count for 75% of grade (midterm exam only)
-
+* __midterm #2__ is in just over two weeks - __Thursday, 4/16__
+	* again, it takes place in class, so come on time!
+	* there are __no make up exams if you miss it!__
+	* if you cannot make it on the scheduled date because of religious observances, please let me know in advance
+* we'll discuss the 2nd midterm in further detail next week 
 </section>
-
-<section markdown="block">
-### Midterm Grades - Details
-
-Check the section on [grading](../../index.html#grading) for breakdown
-</section>
-
-<section markdown="block">
-### And, for the Future
-
-* upcoming topics build off of previously covered material
-* make sure you understand the material we've covered so far (including functions!)
-</section>
--->
 
 <section markdown="block">
 ### Homework
 
-* Homework #6 - due tomorrow
-* Homework #7 - to be posted tomorrow evening
+* __Homework #5__ grades to be posted by end of this week
+* __Homework #7__ is due Friday, April 3rd, no grace period
 </section>
 
 <section markdown="block">
-### Today's Topics
+### Selected Homework Solutions
 
-<aside>A mix of functions and strings</aside>
+For homework #5 (nested loops):
 
-* wrap up functions
-* finally, something new:
-	* well, a new look at something old:
-	* strings!
+* [slashes.py](../../resources/code/hw5/slashes.py)
+* [another version of slashes.py](../../resources/code/hw5/slashes_2.py)
+* [snake_eyes.py](../../resources/code/hw5/snake_eyes.py)
+* [stars.py](../../resources/code/hw5/stars.py)
+* [lots_of_stars.py](../../resources/code/hw5/lots_of_stars.py)
+
+
 </section>
 
 <section markdown="block">
-### Today's Topics in Detail
+### Reviewing Types, Conditionals, Loops, and Functions
 
-* Functions Summary
-* Testing Functions Using Assert (automated teseting)
-* Docstrings
-* Scope (how do I know what variables can be used)
-* Recursion (a function in a function)
-* Strings (quick recap of what we know so far... then more!)
-* Strings as a Sequence of Characters
-* String Objects and Their Methods
+Want a __refresher__ on some earlier topics? Need help __catching up__? Loved the earlier material so much, you want to hear about it again? 
+
+* Email me today or tomorrow... 
+* And if I have enough interest, I'll try to have something set up for Thursday evening or Friday morning.
+* [Of course, I'm still holding regular office hours](../../)
+
+
 </section>
 
 <section markdown="block">
-## [A Diversion (Euclidean Rhythms)](euclid.html)
+
+## [Scope Recap](review_scope.html)
 </section>
