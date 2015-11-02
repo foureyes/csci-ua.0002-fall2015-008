@@ -1,19 +1,33 @@
 <article class="due" markdown="block">
 #### Due Today
 
-{% comment %}
-* Homework
-{% endcomment %}
+* Homework #06
+* Module #08
 
 </article>
 
 <article class="slides" markdown="block">
 #### Slides
 
-{% comment %}
-* [Slides](classes/01/intro.html)
-{% endcomment %}
+All about lists!
 
+The basics ([check out the module too of course]({{ site.module8 }})):
+
+* [Lists Overview](classes/17/lists.html)
+* [List Methods](classes/17/list_methods.html)
+
+For Today's class:
+
+* [Review](classes/17/lists_review.html)
+* [Iterating with Indexes](classes/17/iterating_with_indexes.html)
+* [List Comprehensions](classes/17/list_comprehensions.html)
+* [Exercises](classes/17/list_exercises.html)
+* [Mutability](classes/17/mutability.html)
+* [List, Strings and Random](classes/17/lists_strings_random.html)
+
+{% comment %}
+* [Nested Lists, Nested Loops](classes/17/nested_loops.html)
+{% endcomment %}
 </article>
 
 <article class="assignments" markdown="block">

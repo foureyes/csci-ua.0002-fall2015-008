@@ -281,7 +281,7 @@ Jump to Class:
 
 * Lists
 
-</article> {% include classes/18/materials.markdown %} </div> </section> 
+</article> {% include classes/17/materials.markdown %} </div> </section> 
 
 <a name="class18"></a><!---------- start --------------->
 
@@ -293,7 +293,7 @@ Jump to Class:
 #### Topics 
 
 * In-class programming assignment
-</article> {% include classes/17/materials.markdown %} </div> </section> 
+</article> {% include classes/18/materials.markdown %} </div> </section> 
 
 <a name="class19"></a><!---------- start --------------->
 
