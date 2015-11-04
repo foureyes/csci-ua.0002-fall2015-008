@@ -23,10 +23,10 @@ Jump to Class:
  [10/19](#class13),
  [10/21](#class14),
  [10/26](#class15),
- [10/28](#class16)
-{% comment %}
+ [10/28](#class16),
  [11/02](#class17),
- [11/04](#class18),
+ [11/04](#class18)
+{% comment %}
  [11/09](#class19),
  11/11 (midterm #2),
  [11/16](#class21),

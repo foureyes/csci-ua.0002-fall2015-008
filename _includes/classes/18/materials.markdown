@@ -11,9 +11,7 @@
 <article class="slides" markdown="block">
 #### Slides
 
-{% comment %}
-* [Slides](classes/01/intro.html)
-{% endcomment %}
+* [Warm-Up for List Homework](classes/18/lists_warmup.html)
 
 </article>
 
