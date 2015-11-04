@@ -47,7 +47,7 @@ Returns the animal with the name specified from a list of animals.
 examples:
 
 animal_list = [['sam', 'snake', 4], ['gertrude', 'goat', 99]]
-print(get_most_urgent(animal_list))
+print(find_by_name('gertrude', animal_list))
 # will print out ['gertrude', 'goat', 99]
 
 
