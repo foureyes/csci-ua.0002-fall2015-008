@@ -52,10 +52,8 @@ Write a function called __average_point__:
 * it has one parameter, a list of lists
 * each sub list represents a point on the coordinate plain, so each will be composed of two elements
 * for example: [[0, 0], [5, 10]] ... is a list of two points (0, 0) and (5, 10)
-* it'll create an entirely new list (how?) that's copied from the list passed in
-* it'll swap the first and second element of the new list
-* if the list is less than two elements, it'll just give back the original list
-* finally, its return value is the new list with the first and second element swapped
+* it'll create a new single point where the x value is the average of all of the x's and the y value is average of all of the y's
+* finally, it'll return this new single point
 
 {% highlight python %}
 print(average_point([[2, 2], [3, 1], [4, 0]]))
