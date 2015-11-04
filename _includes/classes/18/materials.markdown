@@ -1,6 +1,7 @@
 <article class="due" markdown="block">
 #### Due Today
 
+(no quiz)
 {% comment %}
 * Homework
 {% endcomment %}
@@ -18,6 +19,11 @@
 
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
+
+* [vet.py](homework/hw07/vet.py)
+* [pawesome_pet_vet.py](homework/hw07/pawsome_pet_vet.py)
+* [balance.py](homework/hw07/balance.py)
+* [rps.py](homework/hw07/rps.py)
 
 {% comment %}
 Readings
