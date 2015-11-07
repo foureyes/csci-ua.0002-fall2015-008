@@ -18,6 +18,8 @@
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
 
+Homework #7 __Due Sunday, Nov 10th, at 11PM__ 
+
 * [vet.py](homework/hw07/vet.py)
 * [pawesome_pet_vet.py](homework/hw07/pawsome_pet_vet.py)
 * [balance.py](homework/hw07/balance.py)
