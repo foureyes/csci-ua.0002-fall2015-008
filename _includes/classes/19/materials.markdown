@@ -18,7 +18,7 @@ Midterm #2 Practice
 * [Midterm #2 List Questions - Solutions](resources/handouts/midterm_2/midterm_2_list_practice_solutions.pdf)
 * [Midterm #2 Shared Practice Questions and Solutions](resources/handouts/midterm_2/m02sampleproblems.html)
 
-These questions do not indicate the exact topics or difficulty level of the questions on the exam (in fact, the list practice questions have has a very high number of challenging problems which is not representative of the _actual_ exam).
+These questions do not indicate the exact topics, number of questions or difficulty level of the questions on the exam (the list practice has a very high number of challenging problems which is not representative of the _actual_ exam).
 
 </article>
 
