@@ -10,9 +10,15 @@
 <article class="slides" markdown="block">
 #### Slides
 
-{% comment %}
-* [Slides](classes/01/intro.html)
-{% endcomment %}
+Midterm #2 Practice
+
+* [Midterm #2 Practice Questions](resources/handouts/midterm_2/midterm_2_practice.pdf)
+* [Midterm #2 Practice Questions - Solutions](resources/handouts/midterm_2/midterm_2_practice_solutions.pdf)
+* [Midterm #2 List Questions](resources/handouts/midterm_2/midterm_2_list_practice.pdf)
+* [Midterm #2 List Questions - Solutions](resources/handouts/midterm_2/midterm_2_list_practice_solutions.pdf)
+* [Midterm #2 Shared Practice Questions and Solutions](resources/handouts/midterm_2/m02sampleproblems.html)
+
+These questions do not indicate the exact topics or difficulty level of the questions on the exam (in fact, the list practice questions have has a very high number of challenging problems which is not representative of the _actual_ exam).
 
 </article>
 
