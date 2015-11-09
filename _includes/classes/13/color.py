@@ -1,5 +1,6 @@
 import turtle
 wn = turtle.Screen()
+wn.setup(500, 500) # set the width and height of the window
 t = turtle.Turtle()
 
 wn.bgcolor("green") # change the background color to green

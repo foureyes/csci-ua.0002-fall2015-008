@@ -156,7 +156,7 @@ b ---+
 
 The actual list object, [1, 2, 3], now has two names that refer to it.  Referencing the same object with more than one name is called __aliasing__.  
 
-In the following code, a and b refer to the same object.  __What will the values of a and b be if we append a value to b? &rarr;__
+In the code below, a and b refer to the same list.  __What will the values of a and b be if we append 4 to b? &rarr;__
 
 {% highlight python %}
 a = [1, 2, 3]
@@ -178,22 +178,21 @@ See in [python tutor](http://pythontutor.com/visualize.html#code=a+%3D+%5B1,+2,+
 <section markdown="block">
 ### Aliasing Continued Some More!
 
-__Aliasing causes side effects in mutable objects!__  However, it's a different story with immutable objects, like strings.  __What gets printed out here? &rarr;__
+__Aliasing causes side effects in mutable objects!__  However, if an object is immutable, like a string, these side effects don't occur (since the object can't be changed anyway!).  __What gets printed out here? &rarr;__
 
 {% highlight python %}
 a = "hello" 
 b = a
-c = b.upper()
+b.upper()
 print(a)
 print(b)
-print(c)
 {% endhighlight %}
 
 <div class="incremental" markdown="block">
 {% highlight python %}
 hello
 hello
-HELLO
+# b never changed, so neither did a
 {% endhighlight %}
 </div>
 </section>
@@ -251,5 +250,26 @@ See in [Python tutor](http://pythontutor.com/visualize.html#code=numbers+%3D+%5B
 </section>
 
 <section markdown="block">
-## [Lists, Strings, Random ](lists_strings_random.html)
+### Kind of Important
+
+__Changes made to a mutable object that's an argument to a function can be seen both within and outside of the function (all refer to  the same object!).__ &rarr;
+
+
+The following function finds the largest integer in a list of integers, but it inadvertently sorts the original.
+
+{% highlight python %}
+# hm... maybe not the best way to find the greatest, but ...
+def find_greatest(numbers):
+    numbers.sort()
+    return numbers[-1]
+
+my_numbers = [5, 6, 1, 4]
+greatest = find_greatest(my_numbers)
+
+#hey wait a second, this isn't the original list!
+print('original list:', my_numbers)
+print(greatest)
+{% endhighlight %}
+
 </section>
+

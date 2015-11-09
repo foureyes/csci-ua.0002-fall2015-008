@@ -282,7 +282,9 @@ t.color("blue")
 
 Methods you can call on your __Screen__ object
 
+* __setup__(width, height) - window dimensions (default is 50% and 75% of screen)
 * __bgcolor__(_colorstring_) - change the background color of your window to _colorstring_
+
 {% highlight python %}
 wn.bgcolor("pink")
 {% endhighlight %}
@@ -341,6 +343,17 @@ __BTW... what do you think this draws? &rarr;__
 </section>
 
 <section markdown="block">
+### A Confused Turtle
+
+A quick demo using goto: __let's try incorporating random elements to our drawings!__ &rarr;
+
+<div class="incremental" markdown="block">
+{% highlight python %}
+{% include classes/13/confused.py %}
+{% endhighlight %}
+</div>
+</section>
+<section markdown="block">
 ###  Let's Use What We Know to Create a Square!
 
 __How would we tell the turtle to create a square with the upper left corner at the origin? Each side should be 200px long.  We just learned goto, so let's try that.&rarr;__
@@ -365,12 +378,12 @@ __Same thing, but this time, just use forward or back and either left or right. 
 </section>
 
 <section markdown="block">
-### One Last Square!
+### For a Square....
 
 __How can we simplify the previous version?  There was a lot of repeated code! &rarr;__
 
 <div class="incremental" markdown="block">
-Let's try it with loops!
+Clearly, this calls for a __for loop__!
 
 {% highlight python %}
 {% include classes/13/square_with_loops.py %}
@@ -379,52 +392,403 @@ Let's try it with loops!
 </section>
 
 <section markdown="block">
+### Loops for Squares?
+
+Ugh... so, every time we want a square, we have to write another loop? That seems a bit cumbersome. 
+
+__What can we do to package up a drawing of a square so that we we don't have to explicitly worry about looping?__ &rarr;
+
+
+<div class="incremental" markdown="block">
+How about we write a function?
+
+* every time we want a square, we just call draw_square()
+* all of the implementation details of drawing a square are hidden within that function
+* __easy enough__ &rarr;
+</div>
+
+
+</section>
+
+<section markdown="block">
+### draw_square Function
+
+__Write a function to draw a square with a side of length 200.__ &rarr;
+
+* parameters: 0 (no parameters)
+* processing: draws a square with side of length 200
+* return value: None (does not return anything)
+
+<div class="incremental" markdown="block">
+{% highlight python %}
+# turtle setup
+
+function draw_square():
+	for i in range(4):
+    	t.forward(200)
+    	t.right(90)
+
+draw_quare()
+
+wn.mainloop()
+
+{% endhighlight %}
+</div>
+
+</section>
+
+<section markdown="block">
+### Cool Function, Bro... But...
+
+So, our function worked pretty well for drawing a square, but there's a major shortcoming. __What's not so great about the draw_square function that we created?__ &rarr;
+
+<div class="incremental" markdown="block">
+For every different sized square, we'd have to create another function. __How do we get around this?__ &rarr;
+
+Parameterize the side length!
+
+{% highlight python %}
+def draw_square(side_length):
+	for i in range(4):
+    	t.forward(side_length)
+    	t.right(90)
+{% endhighlight %}
+</div>
+</section>
+
+<section markdown="block">
+### Ok, Now What? Using draw_square(...)
+
+Eh? That was a lot of work, but for what. __Let's try our new draw square_function by drawing _a lot_ of squares!__ &rarr;
+
+<div class="incremental" markdown="block">
+
+{% highlight python %}
+for size in range(10, 501, 10):
+    draw_square(size)
+    t.up()
+    t.back(5)
+    #t.forward(5)
+    t.down()
+    #t.left(10)
+{% endhighlight %}
+</div>
+</section>
+
+<section markdown="block">
+### Y So Slow?
+
+It's fun watching the turtle draw stuff for the first couple of times you work on your program, but it gets _super annoying_ immediately after that. 
+
+Just like cooking shows where the food magically appears all cooked, __we can get to the drawing results faster by adding these two lines of code__: &rarr;
+
+{% highlight python %}
+# after creating a turtle and a screen...
+
+t.hideturtle()
+wn.tracer(0)
+
+# after drawing stuff...
+wn.update()
+{% endhighlight %}
+</section>
+
+<section markdown="block">
+### hideturtle, tracer, update
+
+Ok... so those two special methods for drawing more quickly were:
+
+* t.__hideturtle()__ - makes the turtle invisible (this _actually_ speeds up drawing, somehow!?)
+* wn.__tracer(0)__ - turns animation off
+* wn.__update()__ - to remind Python to _actually_ refresh the window with the new drawing
+</section>
+
+
+
+<section markdown="block">
+### Enough With Squares
+
+__Long live pentagons!__ More sides equals _more_ better, right!?
+
+But first. Some geometry
+
+* __sum of interior angles__ of a polygon are: 
+	* (number of sides - 2) × 180°
+* to get each __interior angle__ of a polygon, divide the sum of interior angles by number of sides:
+	* sum of interior angles / sides
+* so, the turtle has to turn 180 - the interior angle
+
+</section>
+
+<section markdown="block">
+### Planning for a Pentagon
+
+So, for a pentagon, __when we apply the calculations from the previous slide...__ &rarr;
+
+* sum_interior_angles = (5 - 2) * 180 = 540
+* interior_angle = 540 / 5 = 108
+* turtle_angle = 180 -108 = 72
+</section>
+
+
+<section markdown="block">
 ### Pentagons
 
-__Try drawing two blue pentagons that are 200 pixels apart:. &rarr;__
-
-<div class="img-container" markdown="block">![Pentagons](../../resources/img/pentagons.png) 
-</div>
-</section>
-
-<section markdown="block">
-### Just One Pentagon First...
-
-* sum of interior angles 
-	* (sides - 2) × 180° = (5 - 2) * 180 = 540
-* each angle of a regular polygon 
-	* (sides - 2) × 180° / sides = 540 / 5 = 108
-	* turtle will turn 72
+Ok, so that means we have 5 sides, and the turtle has to turn 72 degrees. __Let's create a draw_pentagon function__ &rarr;
 
 <div class="incremental" markdown="block">
 {% highlight python %}
-{% include classes/13/pentagon.py %}
+def draw_pentagon(side_length):
+    for i in range(5):
+        t.forward(side_length)
+        t.right(72)
+
+draw_pentagon(200)
 {% endhighlight %}
 </div>
 </section>
 
 <section markdown="block">
-### Now Two Pentagons
+### Same but Different
 
-__Two pentagons 200px apart... &rarr;__
+Let's check out our draw_square and draw_pentagon functions. __Can anyone find another _thing_ to parameterize?__ &rarr;
+
+{% highlight python %}
+def draw_square(side_length):
+    for i in range(4):
+        t.forward(side_length)
+        t.right(90)
+
+def draw_pentagon(side_length):
+    for i in range(5):
+        t.forward(side_length)
+        t.right(72)
+
+{% endhighlight %}
 
 <div class="incremental" markdown="block">
-{% highlight python %}
-{% include classes/13/pentagon_part_two.py %}
-{% endhighlight %}
+The number of sides!
 </div>
 </section>
 
 <section markdown="block">
-### A Confused Turtle
+### Why. Stop. At. Squares and Pentagons. Polygonz!
 
-__Let's try incorporating random &rarr;__
+So many shapes. __Let's create one function that could draw a square, pentagon or even a tetradecagon__. &rarr;
+
+Create a function called __draw_poly__ that has two parameters: 
+
+* number of sides
+* length of a side...
+
+Remember the following calculations:
+
+* __sum interior angles__ = (num sides - 2) × 180°
+* __interior angle__ = sum interior angles / num sides
+* __turtle's turn angle__ = 180 - interior angle
+
+</section>
+
+<section markdown="block">
+### draw_poly
+
+{% highlight python %}
+def draw_poly(sides, side_length):
+    sum_interior_angles = (sides - 2) * 180
+    interior_angle = sum_interior_angles / sides
+    a = 180 - interior_angle
+    for i in range(sides):
+        t.forward(side_length)
+        t.right(a)
+{% endhighlight %}
+</section>
+
+
+<section markdown="block">
+### Polygonz!
+
+__Let's draw a bunch of polgons, starting with a rectangle, going up to and including a 10-gon.__ &rarr;
 
 <div class="incremental" markdown="block">
 {% highlight python %}
-{% include classes/13/confused.py %}
+t.up()
+t.back(300)
+t.down()
+for sides in range(3, 11):
+    draw_poly(sides, 1 / sides * 175)
+    t.setheading(0)
+    t.up()
+    t.forward(70)
+    t.down()
 {% endhighlight %}
 </div>
+</section>
+
+
+<section markdown="block">
+### Circle
+
+We were kind of approaching a circle at the end there. __This is a pretty decent approximation.__ &rarr;
+
+{% highlight python %}
+draw_poly(60, 30)
+{% endhighlight %}
+
+Buuuut... of course there's also a __circle(radius__ method:
+
+{% highlight python %}
+t.circle(50)
+{% endhighlight %}
+</section>
+
+
+<section markdown="block">
+### ontimer
+
+__Let's bring time into the mix!__ &rarr;
+
+The Screen object function, __ontimer__, allows a function to be executed some specified time (in milliseconds) later. For example, the following code would call a function called my_draw 500 milliseconds later.
+
+{% highlight python %}
+wn.ontimer(my_draw, 500)
+{% endhighlight %}
+
+Notice that the function name is passed in as you would any other variable name.</section>
+
+__On to an example...__ &rarr;
+</section>
+
+<section markdown="block">
+### ontimer Example
+
+__What will happen when this program is run?__ &rarr;
+
+{% highlight python %}
+# usual turtle set up above is omitted
+t.hideturtle()
+wn.tracer(0)
+
+# assuming draw_square function was defined above
+def draw_stuff():
+    draw_square(20)
+    t.up()
+    t.forward(22)
+    t.down()
+    wn.update()
+
+wn.ontimer(draw_stuff, 2000)
+wn.ontimer(draw_stuff, 4000)
+wn.ontimer(draw_stuff, 6000)
+wn.ontimer(draw_stuff, 8000)
+
+wn.mainloop()
+{% endhighlight %}
+</section>
+
+<section markdown="block">
+### ontimer Example Continued
+
+Let's modify our __draw_stuff__ method ever so slightly. __What will happen when this program is run?__ &rarr;
+
+{% highlight python %}
+def draw_stuff():
+    draw_square(20)
+    t.up()
+    t.forward(22)
+    t.down()
+    wn.update()
+    # move ontimer into the function body
+    wn.ontimer(draw_stuff, 500)
+
+# now call draw_stuff once...
+draw_stuff()
+{% endhighlight %}
+</section>
+
+<section markdown="block">
+### clear
+
+To __reset the drawings on the screen__, just call __clear__ on your turtle object!
+
+{% highlight python %}
+t.clear()
+{% endhighlight %}
+
+This is actually kind of handy because... __we can do clear the screen before drawing each square__ (which essentially has the effect of... ???) &rarr;
+</section>
+
+<section markdown="block">
+### Animation!
+
+Clearing the screen before we draw a square at a new position __has the effect of animation!__ &rarr;
+
+{% highlight python %}
+def draw_stuff():
+    # clear the screen
+    t.clear()
+    draw_square(20)
+    t.up()
+
+    # descrease the forward movement 
+    t.forward(22)
+    t.down()
+    wn.update()
+    wn.ontimer(draw_stuff, 500)
+{% endhighlight %}
+</section>
+
+
+<section markdown="block">
+### Putting Everything Together
+
+Ok ... so this is a bit ambitious. Let's try creating a bouncing circle. __Starting with some setup code:__ &rarr;
+
+{% highlight python %}
+import turtle
+
+t, wn = turtle.Turtle(), turtle.Screen()
+
+turtle_x, turtle_y, turtle_dx, turtle_dy = [0], [0], [0], [-0.1]
+
+# store acceleration
+acc = -0.5
+
+# turn animation of turtles off
+wn.tracer(0)
+t.hideturtle()
+
+# draw function goes here
+
+draw()
+wn.mainloop()
+{% endhighlight %}
+</section>
+
+
+<section markdown="block">
+### Putting Everything Together
+
+Aaaand... __filling in our draw function__ &rarr;
+
+{% highlight python %}
+def draw():
+    t.clear()
+    t.penup()
+    t.goto(turtle_x[0], turtle_y[0])
+    t.pendown()
+    turtle_y[0] += turtle_dy[0]
+
+    # change velocity based on acceleration
+    turtle_dy[0] += acc
+    t.circle(15)
+
+    wn.update()
+    wn.ontimer(draw, 30)
+    
+    # bounce!
+    if turtle_y[0] <= -250:
+        turtle_dy[0] *= -1
+{% endhighlight %}
 </section>
 
 <section markdown="block">
@@ -449,6 +813,3 @@ Running these programs (from IDLE or from Terminal!) cause a new window to pop u
 * your prints still show up in the shell, but you'll have to juggle two windows. __demo &rarr;__
 </section>
 
-<section markdown="block">
-## [Functions!](functions.html)
-</section>

@@ -10,6 +10,16 @@
 <article class="slides" markdown="block">
 #### Slides
 
+Selected Slides from Previous Lecture
+
+* [Mutability](classes/17/mutability.html)
+* [Iterating with Indexes](classes/17/iterating_with_indexes.html)
+* [List, Strings and Random](classes/17/lists_strings_random.html)
+
+Today's Slides
+
+* [Turtle](classes/19/turtle.html)
+
 Midterm #2 Practice
 
 * [Midterm #2 Practice Questions](resources/handouts/midterm_2/midterm_2_practice.pdf)
