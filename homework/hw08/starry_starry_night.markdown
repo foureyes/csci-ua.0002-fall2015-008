@@ -26,7 +26,7 @@ Requirements
     * don't forget to call update at the end of it
 * call your function once to draw a star in the middle of the screen
 
-![star middle](http://foureyes.github.io/csci-ua.0002-spring2015-008/resources/img/turtle/starry_1.png)
+![star middle](http://foureyes.github.io/csci-ua.0002-fall2015-008/resources/img/turtle/starry_1.png)
 
 ### Part 2
 
@@ -36,9 +36,9 @@ Requirements
 * or... if you want to get fancy, draw them in a curve
 * see the examples below:
 
-![stars in a row](http://foureyes.github.io/csci-ua.0002-spring2015-008/resources/img/turtle/starry_2.png)
+![stars in a row](http://foureyes.github.io/csci-ua.0002-fall2015-008/resources/img/turtle/starry_2.png)
 
-![stars curved](http://foureyes.github.io/csci-ua.0002-spring2015-008/resources/img/turtle/starry_3.png)
+![stars curved](http://foureyes.github.io/csci-ua.0002-fall2015-008/resources/img/turtle/starry_3.png)
 
 ### Part 3
 
@@ -71,7 +71,7 @@ print(star_data)
 * call you draw_sky function once...
 * it should look something like this:
 
-![lots of stars](http://foureyes.github.io/csci-ua.0002-spring2015-008/resources/img/turtle/starry_4.png)
+![lots of stars](http://foureyes.github.io/csci-ua.0002-fall2015-008/resources/img/turtle/starry_4.png)
 
 Extra Credit
 -----
@@ -87,6 +87,6 @@ Extra Credit
     * it should be small (maybe between 1 and 5)
 * in your draw_sky function, as you iterate through your list of star data, add the generated velocity (the value at index 3) to the x value (the value at index 0) rather than just increment by 1
 
-![animation](http://foureyes.github.io/csci-ua.0002-spring2015-008/resources/img/turtle/starry_ec.gif)
+![animation](http://foureyes.github.io/csci-ua.0002-fall2015-008/resources/img/turtle/starry_ec.gif)
 
 

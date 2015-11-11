@@ -7,7 +7,7 @@ your_face.py (5 points)
 =====
 Draw a face using turtle. For example, you can draw the look of disapproval!
 
-![look of disapproval](http://foureyes.github.io/csci-ua.0002-spring2015-008/resources/img/turtle/your_face.png)
+![look of disapproval](http://foureyes.github.io/csci-ua.0002-fall2015-008/resources/img/turtle/your_face.png)
 
 Requirements
 -----
@@ -38,5 +38,5 @@ Extra Credit
     * setheading might be helpful
 * see the example below:
 
-![asking for input](http://foureyes.github.io/csci-ua.0002-spring2015-008/resources/img/turtle/your_face_ec.gif)
+![asking for input](http://foureyes.github.io/csci-ua.0002-fall2015-008/resources/img/turtle/your_face_ec.gif)
 
