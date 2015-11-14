@@ -26,11 +26,11 @@ Jump to Class:
  [10/28](#class16),
  [11/02](#class17),
  [11/04](#class18),
- [11/09](#class19)
+ [11/09](#class19),
+ [11/11](#class20),
+ [11/16](#class21), 
+ 11/18(midterm #2)
 {% comment %}
- [11/11](#class21),
- [11/16](#class22), 
- 11/18(midterm #2),
  [11/23](#class23),
  [11/30](#class24),
  [12/02](#class25),
