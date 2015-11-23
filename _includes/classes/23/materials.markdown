@@ -10,6 +10,8 @@
 <article class="slides" markdown="block">
 #### Slides
 
+* [About Class #23](classes/23/meta.html)
+* [Courses Next Semester](classes/23/cs.html)
 * [Exceptions](classes/23/exceptions.html)
 * [File I/O Part 1](classes/23/files.html)
 * [File System and Paths](classes/23/paths.html)

@@ -10,27 +10,21 @@ title: About Class #23
 <section markdown="block">
 ### Topics 
 
-* some leftover list topics
-	* lists, strings, and random
-	* lists and mutability
 * file i/o
-* modules revisited
 * exceptions
+* taking more cs courses? 
 
 </section>
 
 <section markdown="block">
 ### Grades
 
-* midterm #2 grades by Friday evening
+* midterm #2 grades by end-of-week
 * grades for homework #6 and #7 to be posted by weekend
 </section>
 
 <section markdown="block">
 ### Office Hours This Week
-
-* 4/21 - office hours moved to __4/23__ from __3:15 - 4:45PM__
-* (also, I'm available tomorrow, Wednesday, at 5pm)
 
 </section>
 {% comment %}
