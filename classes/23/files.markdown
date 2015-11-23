@@ -7,110 +7,6 @@ title: File I/O
 {% include title-slide-footer.html %}
 </section>
 
-<section markdown="block">
-### And Now... Scrabble(?)
-
-Imagine that you're playing Scrabble (or... Words With Friends?).  
-
-What are some _valid_ words can you create if you have the following letters left in your rack of tiles? 
-
-__t__, __r__, __c__, __a__
-
-</section>
-
-<section markdown="block">
-### Whatever List We Came Up With...
-
-_It's probably not complete_
-
-<div class="incremental" markdown="block">
-{% highlight python %}
-act
-ar
-arc
-art
-at
-car
-cart
-cat
-rat
-ta
-tar
-{% endhighlight %}
-
-__So ... who do you think would be _particularly_ good at finding valid scrabble words from a set of letters?__
-</div>
-</section>
-
-<section markdown="block">
-## As Always...  Let's let the computer do this for us
-
-</section>
-
-<section markdown="block">
-### You Saw This Coming
-
-Let's write a program that asks for a set of letters, and determines all of the valid words that can be created by that set of letters.  
-
-It'll probably look like this:
-
-{% highlight python %}
-Please enter some letters
-> trca
-act
-ar
-arc
-art
-at
-car
-cart
-cat
-rat
-ta
-tar
-{% endhighlight %}
-
-(__let's check out a demo__ &rarr;)
-</section>
-
-<section markdown="block">
-### Scrabble Solver
-
-* write a program that asks for input (a set of letters)
-* it should print out all of the combinations of letters that make valid words _in alphabetical order_
-* don't worry about an empty string for now
-</section>
-
-<section markdown="block">
-### Some Questions About the Scrabble Solver....
-
-__What data will we need?__  __Can we break this problem down into smaller parts?__ &rarr;
-
-<div class="incremental" markdown="block">
-* data...
-	* a dictionary or list of valid words
-	* the letters that the user entered
-* implementation...
-	* ask the user for input
-	* find a list of valid words and load that list into the program
-	* devise algorithm to determine if word can be formed from input
-</div>
-</section>
-
-<section markdown="block">
-### We Know How to Do This (Mostly)
-
-So...  finding a list of valid words and loading it is the only part that's new for us.
-
-* first off... there are a [bunch of freely available word lists online](http://www.puzzlers.org/dokuwiki/doku.php?id=solving%3awordlists%3aabout%3astart)
-* [This one (enable1.txt)](http://www.puzzlers.org/pub/wordlists/enable1.txt) is pretty popular
-* but then, we'll have to learn how to get that list into our program
-* which is why we're going to talk about __file input and output__ (or File I/O for short)
-</section>
-
-<section markdown="block">
-## So... Let's Look at _File Input and Output_!
-</section>
 
 <section markdown="block">
 ### Where's My Stuff?
@@ -232,7 +128,7 @@ __write(s)__
 <section markdown="block">
 ### Lottery Ticket
 
-Write a function that creates a lottery ticket.  The lottery ticket should:
+Write a program that creates a lottery ticket.  The lottery ticket should:
 
 * have the words "Lucky Numbers" on the first line
 * contain 5 __unique__ numbers between 1 through 59
@@ -387,19 +283,37 @@ f = open("test.txt", "r")
 </section>
 
 <section markdown="block">
-### Methods for Reading a File
+### Reading a File
 
-Once you have a __file handle__, you can read the contents of a file by using one of the following methods on your __file handle object__:
+Once you have a __file object__ (sometimes called a file handle), you can read the contents of a file by: using one of the following methods on your __file handle object__:
 
-* __readline__() - read one line at a time
-* __read__() - reads the entire contents of a file into memory
+* __iterating__ over the __file object__ itself (use a for loop with the file object)
+* using one of the following __methods__ on the __file object__
+	* __readline__() - read one line at a time
+	* __readlines__() - reads entire contents of a file into memory as a list (each element is a line)
+	* __read__() - reads the entire contents of a file into memory as a string
 
+{% comment %}
 __Why would you use one method over another?__
 
 <div class="incremental" markdown="block">
 * you may want to use read if you're operating on the contents of the file as a whole
 * you may want to use readline if you're working with a very large file
 </div>
+{% endcomment %}
+</section>
+
+<section markdown="block">
+### The Easiest Way to Read a File
+
+Once you have a file object, you can actually _iterate_ over the file object itself. That is, you can use a __for loop__ to loop over every line in the __file object__:
+
+{% highlight python %}
+f = open("test.txt", "r")
+for line in f:
+    print(line)
+{% endhighlight %}
+
 </section>
 
 <section markdown="block">
@@ -409,7 +323,6 @@ __readline__() takes no arguments, and it returns a string.
 
 * it always returns a string, even if it's just a new line character ("\n")
 * if it returns an empty string, then we've reached the end of the file
-
 </section>
 
 <section markdown="block">
@@ -433,7 +346,17 @@ f.close()
 <section markdown="block">
 ### Using readline() Continued More!
 
+Using the test.txt file we've used in previous examples:
+
+
+{% highlight bash %}
+I'm in yr filez!
+Writin' some bits!\n
+...
+{% endhighlight %}
+
 __What is the first line that will be printed?  What is the actual string representation? How many times will the loop run?__
+
 {% highlight python %}
 f = open("test.txt", "r")
 while True:
@@ -465,21 +388,39 @@ print(contents)
 </section>
 
 <section markdown="block">
+### Reading a File in All At Once
+
+Use the __readlines__() method on your file handle object to read the file in all at once as a list, with each line being a single element in the list. 
+
+{% highlight python %}
+f = open("test.txt", "r")
+lines = f.readlines()
+for line in lines:
+	print(line)
+{% endhighlight %}
+
+</section>
+
+<section markdown="block">
 ### Memory Efficiency
 
-__Which function uses more main memory, readline or read? Why?__ &rarr;
+__Which function uses more main memory, readline or read/readlines? Why?__ &rarr;
 
 <div class='incremental' markdown='block'>
-* read consumes more memory because it reads the entire file at once!
+* read/readlines consumes more memory because it reads the entire file at once!
 * similarly, in our previous exercises... we had solutions that either used up a lot of memory... or were expensive computationally
 </div>
 </section>
 
 
 <section markdown="block">
-### Some Notes...
+## Some Notes...
+</section>
 
-__a file object is itself an iterable (you can loop over it using a for loop)... and it reads in chunks of the file as you go along__ &rarr;
+<section markdown="block">
+### A File Object and For Loops
+
+__Again, a file object is itself an iterable (you can loop over it using a for loop)... and it reads in chunks of the file as you go along__ &rarr;
  
 {% highlight python %}
 f = open('my_file.txt', 'r')
@@ -488,182 +429,45 @@ for line in f:
   print(line)
 {% endhighlight %}
 
-__you can also call readlines (with an s) to just read the the entire contents of a file and use each line as an element in a list__ &rarr;
+</section>
+
+
+<section markdown="block">
+### Creating Text Files with IDLE
+
+Some of these exercises require you to work with existing text files. So, __how do you create these files__? &rarr;
+
+IDLE can be used to work on files that _aren't_ Python programs. __To save a _plain text_ file__ &rarr;
+
+* go to __new file__ as usual
+* ...and __save as__ ... but add __.text__ as your extension
+
+</section>
+
+<section markdown="block">
+### Multiple File Objects
+
+__You can have more than one file object open at a time. The following example:__ &rarr; 
+
+* reads every line from readme.txt 
+* writes each line with an exclamation point at the end to a file called writeme.txt
+ 
 {% highlight python %}
-# reads in entire file at once
-lines = f.readlines()
-for line in lines:
-  print(line)
+input_file = open('readme.txt', 'r')
+output_file = open('writeme.txt', 'w')
+for line in input_file:
+    output_file.write("{}!\n".format(line))
 {% endhighlight %}
 </section>
 
 <section markdown="block">
-## And Now... Back to Scrabble
+### File System and Paths
+
+Oh... make sure you know about your [file system and how paths work (see these slides!)](file-system.html) &rarr;
 </section>
 
 <section markdown="block">
-### Scrabble Solver 
-
-* asks the user a set of letters
-* print out all of the combinations of letters that make valid words _in alphabetical order_
-* don't worry about an empty string for now
-
-{% highlight python %}
-Please enter some letters
-> rhtu
-hurt
-hut
-rut
-ruth
-thru
-uh
-ut
-{% endhighlight %}
-</section>
-
-<section markdown="block">
-### A Strategy...
-
-* create a function called find_words
-	* it should take two arguments, 
-		* letters (the set of letters to choose from) and dictionary (the file name of the scrabble dictionary)
-		* it should open the file
-	* ...and find valid words from the set of letters
-	* ...and return a list of valid words
-* get user input 
-* use the function, find_words, to get valid words
-* print out result
-* remeber to [download a word list - enable1.txt](http://www.puzzlers.org/pub/wordlists/enable1.txt)
-</section>
-<section markdown="block">
-### Pseudocode Without Going Through All Permutations
-
-We could try finding every permutation of letters in a word, including substrings... and checking for a substring.
-
-However, there's a way to do this by going through every word in the list and seeing if the letters can form that word. __How__ &rarr;
-
-<div class="incremental" markdown="block">
-* for every word in the dictionary
-* check if each letter exists in a copy of your set of all letters
-* if it does, "remove" it from your copy (it's been exhausted)
-* if it doesn't, then your letters can't create the dictionary word
-</div>
-</section>
-
-<section markdown="block">
-### Potential Solution With Readline
-
-{% highlight python %}
-def find_words(letters, dictionary):
-    words = []
-    f = open(dictionary, 'r')
-    while True:
-        line = f.readline()
-        if len(line) == 0:
-            break
-        word = line.strip()
-        temp_letters = list(letters)
-        letters_in_word = True
-        for char in word:
-            if char in temp_letters:
-                temp_letters.remove(char)
-            else:
-                letters_in_word = False
-                break
-        if letters_in_word:
-            words.append(word)
-    f.close()
-    return words
-{% endhighlight %}
-</section>
-
-<section markdown="block">
-### Potential Solution Iterating Over a File Object
-
-{% highlight python %}
-def find_words(letters, dictionary):
-    words = []
-    f = open(dictionary, 'r')
-    for line in f:
-        word = line.strip()
-        temp_letters = list(letters)
-        letters_in_word = True
-        for char in word:
-            if char in temp_letters:
-                temp_letters.remove(char)
-            else:
-                letters_in_word = False
-                break
-        if letters_in_word:
-            words.append(word)
-    f.close()
-    return words
-{% endhighlight %}
-</section>
-
-<section markdown="block">
-### Main Function
-
-{% highlight python %}
-def main():
-    dictionary_file_name = 'enable1.txt'
-    answer = input('Please enter some letters\n> ')
-    possible_words = find_words(answer, dictionary_file_name)
-    possible_words.sort()
-    for w in possible_words:
-        print(w)
-
-main()
-{% endhighlight %}
-</section>
-
-<section markdown="block">
-## Recursive Solution
-
-__If you wanted to use recursion to get all permutations...__ &rarr;
-
-<div class="incremental" markdown="block">
-
-{% highlight python %}
-def find_perms(s):
-    if len(s) == 1:
-        return [s]
-    perms_list = []
-    found_perms = find_perms(s[1:])
-    for perms in found_perms:
-        for i in range(len(perms) + 1):
-            perms_list.append(perms[0:i] + s[0] + perms[i:])
-    # include sliced off letter and found sub perms
-    return [s[0]] + perms_list + found_perms
-
-print(find_perms('ab'))
-print(find_perms('abc'))
-{% endhighlight %}
-</div>
-</section>
-
-<section markdown="block">
-## Or... Using a Module
-
-(But this just gives you permutations, doesn't include substrings).
-
-{% highlight python %}
-
-def find_perms(s):
-    import itertools
-    l = list(s)
-    return [''.join(perm) for perm in itertools.permutations(l)]
-
-print(find_perms('ab'))
-print(find_perms('abc'))
-{% endhighlight %}
-
-
-
-</section>
-
-<section markdown="block">
-## Some More Exercises
+## An Exercise
 </section>
 
 <section markdown="block">
@@ -706,81 +510,3 @@ file_out.close()
 {% endhighlight %}
 </section>
 
-<section markdown="block">
-### Jane Austen
-
-You can download a text version of [Pride and Prejudice](http://www.gutenberg.org/cache/epub/1342/pg1342.txt) from Project Gutenberg
-
-__Using that file with our pig_latin and translate_passage functions... can you write out a pig latin version of Pride and Prejudice?__
-
-Also... these are [sort](http://en.wikipedia.org/wiki/Sense_and_Sensibility_and_Sea_Monsters) [of](http://en.wikipedia.org/wiki/Pride_and_Prejudice_and_Zombies) from Jane Austen....
-
-</section>
-
-<section markdown="block">
-### Downloading the File
-
-Save the text version of [Pride and Prejudice](http://www.gutenberg.org/cache/epub/1342/pg1342.txt) in the same folder that your program is in.
-
-</section>
-
-<section markdown="block">
-### Pig Latin
-
-{% highlight python %}
-def to_pig_latin(w):
-    """translates word to pig latin"""
-
-    w = w.lower()
-
-    if not w.isalpha():
-        return w
-
-    if w == '' or len(w) == 1:
-        return w
-
-    if w[0] in 'aeiou':
-        return w + 'way'
-
-    first_two = w[0:2]
-    if first_two == 'qu' or first_two == 'ch' or first_two == 'sh' or first_two == 'th':
-        return w[2:] + first_two + 'ay'
-
-    return w[1:] + w[0] + 'ay'
-{% endhighlight %}
-</section>
-
-<section markdown="block">
-### Translate Passage
-
-{% highlight python %}
-def translate_passage(passage):
-    """translates text into pig latin"""
-    translation = ""
-    word = ""
-    for c in passage:
-        if not c.isalpha():
-            translation += to_pig_latin(word)
-            translation += c
-            word = ""
-        else:
-            word += c
-    return translation
-{% endhighlight %}
-</section>
-
-<section markdown="block">
-### Putting it All Together
-
-{% highlight python %}
-# open file for reading
-fh_in = open('pg1342.txt', 'r')
-s = fh_in.read()
-fh_in.close()
-
-# translate and write
-fh_out = open('pg1342_translated.txt', 'w')
-fh_out.write(translate_passage(s))
-fh_out.close()
-{% endhighlight %}
-</section>

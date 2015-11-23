@@ -39,6 +39,8 @@ Store data as a file on non-volatile memory.
 
 __In Python, what built-in function do we use to interact with files?  How many parameters does it have, and what does it return?__ &rarr;
 
+<div class="incremental" markdown="block">
+
 * __open__ opens a file for reading or writing
 * it takes two arguments: a __filename__ and a __mode__
 	* __filename__ - the _absolute_ or _relative_ path from your program to the file you're opening
@@ -47,6 +49,7 @@ __In Python, what built-in function do we use to interact with files?  How many 
 		* __'r'__ - read
 		* __'a'__ - append
 * it returns a __file__ object
+</div>
 </section>
 
 <section markdown="block">
@@ -113,6 +116,7 @@ __What are the steps for opening a file and retrieving data from it?  What file 
 2. To read data...
 	* iterate over the file object itself (reads one line at a time)
 	* use one of the following methods:
+		* __iterate__ over the __file object__ itself (use a for loop with the file object)
 		* __readline()__
 		* __read()__
 		* __readlines()__
@@ -133,7 +137,7 @@ All of the following methods do not have any parameters.
 <section markdown="block">
 ### Examples
 
-The following examples assume the presence of a file called __ingredients.txt__ ([download here](ingredients.txt)) in the same folder/directory as your program.
+The following examples assume the presence of a file called __ingredients.txt__ ([download here](ingredients.txt) - right-click and save as) in the same folder/directory as your program.
 
 The contents of the file is:
 
@@ -383,6 +387,7 @@ my_output_file.close()
 </div>
 </section>
 
+{% comment %}
 <section markdown="block">
 ### More Reading and Writing
 
@@ -422,6 +427,8 @@ for name in names:
 file_out.close()
 {% endhighlight %}
 </section>
+
+{% endcomment %}
 
 <section markdown="block">
 ### Jane Austen
