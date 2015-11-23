@@ -10,7 +10,7 @@ title: CS Courses Next Semester
 ### Hi. So I'm Teaching a Bunch of Courses Next Semester
 
 
-[Spring 2016 Courses](http://cs.nyu.edu/webapps/spring2016/Undergraduate/courses)
+Check out the list of [Spring 2016 Courses](http://cs.nyu.edu/webapps/spring2016/Undergraduate/courses)
 
 If you want to continue working with Python (or if you're considering a web programming minor)...
 
@@ -22,12 +22,8 @@ If you want to continue working with Python (or if you're considering a web prog
 <section markdown="block">
 ### Considering Becoming a CS Major or Minor?
 
-<aside>Take a look at...</aside>
+Take a look at... the requirements for [majors](http://cs.nyu.edu/webapps/content/academic/undergrad/majors) and [minors](http://cs.nyu.edu/webapps/content/academic/undergrad/minors)
 
-* [majors](http://cs.nyu.edu/webapps/content/academic/undergrad/majors)
-* [minors](http://cs.nyu.edu/webapps/content/academic/undergrad/minors)
-
-<br>
 If you want to eventually go into the CS major or CS minor
 
 * there are many sections of 101

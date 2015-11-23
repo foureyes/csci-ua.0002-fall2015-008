@@ -24,9 +24,11 @@ title: About Class #23
 </section>
 
 <section markdown="block">
-### Office Hours This Week
+### Tutoring
 
+No tutoring during Thanksgiving break
 </section>
+
 {% comment %}
 <section markdown="block">
 ### Homework #8 Part 1
