@@ -1,9 +1,7 @@
 <article class="due" markdown="block">
 #### Due Today
 
-{% comment %}
-* Homework
-{% endcomment %}
+Module #09 and Quiz #09
 
 </article>
 
@@ -19,15 +17,20 @@
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
 
-{% comment %}
-Readings
+Homework #9 __Due Monday, Dec 7th, at 11PM__ 
 
-* Read {{ site.bookq }} - Chapter 1
+* [nba.py](homework/hw09/nba.py)
+* [wordsy.py](homework/hw09/wordsy.py)
 
-Assignments 
+Resources for Homework #9
 
-1. [questions.py](homework/hw01/questions.py) - 9 points
-{% endcomment %}
+* basketball stats: [stats-clean.txt](homework/hw09/stats-clean.txt) (right-click, save as)
+* dictionary: [enable1.txt](homework/hw09/enable1.txt) (right-click, save as)
+
+EXTRA CREDIT FOR MIDTERM
+
+* [battleship.py](homework/hw09/battleship.py)
+
 </article>
 {% comment %}
 <a name="class24"></a>
