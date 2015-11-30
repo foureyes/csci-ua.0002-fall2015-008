@@ -115,4 +115,3 @@ What is the maximum number of words to display?
 Showing max 1 results:
 dirt
 """
-d
