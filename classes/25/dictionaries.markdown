@@ -513,7 +513,7 @@ KeyError: 'fga'
 <section markdown="block">
 ### Back to Dice!
 
-__Try reimplementing our dice program so that it uses a dictionary to store the frequency of rolls (each roll as a key, each value as a count).__  (hint: use the get method or use a try-except to deal with keys that don't exist).
+__Try reimplementing our dice program so that it uses a dictionary to store the frequency of rolls (each roll as a key, each value as a count).__  (hint: use in, the get method or a try-except to deal with keys that don't exist).
 {% highlight python %}
 import random
 twos, threes, fours, fives, sixes = 0, 0, 0, 0, 0
@@ -556,6 +556,3 @@ print(freq_dice_rolls)
 * storing inventory
 </section>
 
-<section markdown="block">
-## [Review](review.html)
-</section>
