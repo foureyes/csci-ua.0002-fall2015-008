@@ -10,9 +10,21 @@
 <article class="slides" markdown="block">
 #### Slides
 
+Slides
+
+* [Tuples](classes/25/tuples.html) 
+* [Dictionaries](classes/25/dictionaries.html)
+* [Dictionaries Exercises](classes/26/exercises.html)
+
 {% comment %}
-* [Slides](classes/01/intro.html)
+[Dictionaries Review](classes/26/dictionaries_review.html)
+and [Tuples Review](classes/25/tuples_review.html)
 {% endcomment %}
+
+Midterm Solutions
+
+* [midterm_2_008_evergreen_solutions.pdf](resources/handouts/midterm_2/midterm_2_008_evergreen_solutions.pdf)
+* [midterm_2_008_cactus_solutions.pdf](resources/handouts/midterm_2/midterm_2_008_cactus_solutions.pdf)
 
 </article>
 

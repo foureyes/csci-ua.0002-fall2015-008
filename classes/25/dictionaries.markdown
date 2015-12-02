@@ -11,15 +11,13 @@ title: Dictionaries
 ###  Remember That Counting Frequency of Dice Rolls Assignment?
 
 * roll two thee sided dice simultaneously 1000 times
-* you remember what they look like, [right](https://www.google.com/search?hl=en&authuser=0&site=imghp&tbm=isch&source=hp&biw=1303&bih=730&q=three+sided+die&oq=three+sided+die)? 
+* (they exist!  what do you think they [look like](http://suptg.thisisnotatrueending.com/archive/14752803/images/1304091112226.jpg)? 
 * count the frequency of the results... 2 through 6
 * __let's code that up really quickly__
 	* generate two random numbers
 	* do this 1000 times
 	* keep track of the number of times a two is rolled... a three... up through six
 	* use multiple assignment for initializing your counts!
-
-<!-- (http://suptg.thisisnotatrueending.com/archive/14752803/images/1304091112226.jpg) -->
 </section>
 
 <section markdown="block">
@@ -279,9 +277,9 @@ __What type is the type of variable, i?  How many iterations are there?  What is
 
 {% highlight python %}
 d = {"first_name":"joe", "fav_candy":"cleo's"}
-v = d.items()
-for i in v:
-	print(i)
+items = d.items()
+for t in items:
+	print(t)
 {% endhighlight %}
 
 </section>
@@ -289,8 +287,19 @@ for i in v:
 <section markdown="block">
 ### Converting a Dictionary to a Bunch of Tuples 
 
-* __i__ is always a __tuple__
-* __2 iterations__, with i being a tuple that represents a name value pair 
+{% highlight python %}
+d = {"first_name":"joe", "fav_candy":"cleo's"}
+items = d.items()
+for t in items:
+	print(t)
+{% endhighlight %}
+
+A few notes....
+
+* items is a _list like_ value that contains tuples
+* in the for loop, __t__ is always a __tuple__
+* __2 iterations__, with t being a tuple that represents a name value pair 
+
 </section>
 
 <section markdown="block">
@@ -329,6 +338,23 @@ one foo
 </section>
 
 <section markdown="block">
+### in and len()
+
+__The in and not in operators work with dictionary keys; len() gives back the number of key/value pairs__ &rarr;
+
+{% highlight python %}
+pizza = {"crust":"thin", "topping":"mushrooms", 'size':'large', 'sauce':'tomato'}
+print(len(pizza))
+# prints out 4
+
+result = 'crust' in pizza
+print(result)
+# prints out True
+{% endhighlight %}
+</section>
+
+
+<section markdown="block">
 ### Summary Questions
 
 * how do we construct a dictionary literal?
@@ -340,6 +366,133 @@ one foo
 * what's another way of accessing a value?
 
 
+</section>
+
+### More Dictionary Methods
+
+By the way, here are a few more dictionary methods:
+
+* __values__() - get all values as a list-like structure
+* __keys__() - get all keys as a list-like structure (
+* __pop__(k, [d]) - removes element at key, _k_, and returns it (returns _d_ if _k_ doesn't exist)
+* __popitem__() - removes and returns _some_ name/value pair as tuple
+* __update__(dictionary) - overwrites all values at keys in original with values at keys from dictionary passed in
+</section>
+
+<section markdown="block">
+### values, keys
+
+__values__ and __keys__ give back _dictionary views_ (they essentially act like lists) of either all values or all keys of the dictionary that they're called on.  __What does this output?__ &rarr;
+
+{% highlight python %}
+vehicle = {"name":"bathysphere", "wheels":0, "can fly":False}
+print(vehicle.keys())
+print(vehicle.values())
+{% endhighlight %}
+
+<div class="incremental" markdown="block">
+Note that the __order of the keys and values cannot be guaranteed!__
+{% highlight python %}
+dict_keys(['can fly', 'wheels', 'name'])
+dict_values([False, 0, 'bathysphere'])
+{% endhighlight %}
+</div>
+</section>
+
+<section markdown="block">
+### pop
+
+__pop__ removes and returns the item at the key specified.  __What does this output?__&rarr;
+
+{% highlight python %}
+vehicle = {"name":"bathysphere", "wheels":0, "can fly":False}
+result1 = vehicle.pop('can fly')
+result2 = vehicle.pop('floats', False)
+print(result1)
+print(result2) 
+print(vehicle)
+{% endhighlight %}
+
+<div class="incremental" markdown="block">
+{% highlight python %}
+False
+False
+{'wheels': 0, 'name': 'bathysphere'}
+{% endhighlight %}
+</div>
+</section>
+
+<section markdown="block">
+### popitem
+
+__popitem__ removes and returns an _arbitrary_ key/value pair.  __What does this output?__&rarr;
+
+{% highlight python %}
+vehicle = {"name":"bathysphere", "wheels":0, "can fly":False}
+result1 = vehicle.popitem()
+print(result1)
+print(vehicle)
+{% endhighlight %}
+
+<div class="incremental" markdown="block">
+Note that the key/value pair removed and returned __will not always be the same!__
+
+{% highlight python %}
+('can fly', False)
+{'wheels': 0, 'name': 'bathysphere'}
+{% endhighlight %}
+</div>
+</section>
+
+<section markdown="block">
+### update
+
+__update__ adds key/value pairs (or updates values if keys already exist) from another dictionary to the dictionary that update is called on.  __What does this output?__&rarr;
+
+{% highlight python %}
+vehicle = {"name":"bathysphere", "wheels":0, "can fly":False}
+another_vehicle = {'can float':True, 'name':'boat'}
+vehicle.update(another_vehicle)
+print(vehicle)
+{% endhighlight %}
+
+<div class="incremental" markdown="block">
+{% highlight python %}
+{'can fly': False, 'wheels': 0, 'name': 'boat', 'can float': True}
+{% endhighlight %}
+</div>
+</section>
+
+
+<section markdown="block">
+### Changing a Value Based on the Existing Value
+
+To change a value base on an existing value, such as incrementing a number, you can simply do something like this (adds one to the current value at fga):
+
+{% highlight python %}
+d = {'fgm':1, 'fga':2}
+d['fga'] = d['fga'] + 1
+{% endhighlight %}
+
+</section>
+
+<section markdown="block">
+### Changing a Value Based on the Existing Value
+
+But what if it doesn't exist yet?  __What happens here?__ &rarr;
+
+{% highlight python %}
+d = {'fgm':1 }
+d['fga'] = d['fga'] + 1
+{% endhighlight %}
+
+<div class="incremental" markdown="block">
+{% highlight python %}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'fga'
+{% endhighlight %}
+</div>
 </section>
 <section markdown="block">
 ### Summary Answers
@@ -399,4 +552,8 @@ print(freq_dice_rolls)
 * counting letters, sorted keys
 * run-length encoding
 * storing inventory
+</section>
+
+<section markdown="block">
+## [Review](review.html)
 </section>

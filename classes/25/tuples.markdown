@@ -3,7 +3,7 @@ layout: slides
 title: Tuples 
 ---
 <section markdown="block" class="title-slide">
-# Tuples Review
+# Tuples
 {% include title-slide-footer.html %}
 </section>
 
@@ -41,65 +41,78 @@ Sequence types support a number of operations...
 </section>
 
 <section markdown="block">
-### Strings vs Lists
+### But Strings and Lists Are Different!
 
-__How are strings and lists different?__ &rarr;
+How are strings and lists different?
 
-
-<div class="incremental" markdown="block">
-* syntax ([]'s and ""'s)
 * a string is an ordered sequence of characters... 
 * a list is an ordered sequence of values (any values)... 
-* __strings are immutable__
-* __lists are mutable__
+
+__But there's also another big difference.__
+
+<div class="incremental" markdown="block">
+* strings are immutable
+* lists are mutable
 </div>
 </section>
 
 <section markdown="block">
 ### A Third Sequence Type
 
-Last week, we learned about a third sequence type.  __What is it called... what is it, and how is different from lists and strings?__ &rarr;
+Surely you must be thinking: _I really wish that my list was not mutable_
 
-<div class="incremental" markdown="block">
-* a __tuple__ is another sequence type
-* __it's basically an immutable list__
+(well... probably not... but...)
+
+<div class="img-container" markdown="block">![Shirley](../../../resources/img/surely.jpg)
+</div>
+
+</section>
+
+<section markdown="block">
+### Tuples
+
+A __tuple__ is an immutable grouping of data.  Think of it as an immutable list.  
+
+* just like a list, it can hold heterogeneous values
 * it can hold strs, lists, ints, and even other tuples
-* because it is immutable:
+* however, it can't be changed!
 	* you can't add items (no extend or append)
 	* you can't remove items (no remove; del doesn't work)
 	* you can't change items (assignment doesn't work)
-</div>
-
 </section>
 
 <section markdown="block">
 ### Tuple Syntax
 
-__Write out the code that creates a tuple with three elements: "python", "java",  and "php"__ &rarr;
+A tuple is really just a group of comma separated values.  A tuple literal is _just_ values and commas.  Really! (btw, [chugs exist, and are _a thing_](http://www.dogbreedinfo.com/chug.htm))
 
-<div class="incremental" markdown="block">
-A tuple is just a group of comma separated values.  A tuple literal is _just_ values and commas. 
-
-{% highlight python %}
-t = "python", "java", "php"
+{% highlight pycon %}
+>>> dogs = "chihuahua", "pug", "chug"
+>>> print(dogs)
+('chihuahua', 'pug', 'chug')
 {% endhighlight %}
 
-It's common to put parentheses around a tuple (printing a tuple always displays the parentheses)
 
-{% highlight python %}
-t = ("python", "java", "php")
+
+However... it's common to put parentheses around a tuple (in fact, when you print a tuple, parentheses are always placed around it).(apparently [Pelicans is now the name of a professional basketball team](http://www.grantland.com/blog/the-triangle/post/_/id/44376/17-reasons-you-should-support-the-change-to-new-orleans-pelicans)!)
+
+{% highlight pycon %}
+>>> birds = ("pelican", "owl", "pigeon")
+>>> print(birds)
+('pelican', 'owl', 'chug')
 {% endhighlight %}
-</div>
 </section>
 
-<section markdown="block">
-### We've Used Tuples...
 
-__Name two places where we've seen tuples before__ &rarr;
+<section markdown="block">
+### Seem Familiar?
+
+We've actually seen and used tuples in the past!  __Does anyone remember where we've seen tuples before?__
 
 <div class="incremental" markdown="block">
 
-String formatting
+<div>
+String formatting with the % operator:
 
 {% highlight python %}
 "I've %s this %s before!" % ("seen", "this")
@@ -110,16 +123,18 @@ Multiple assignment
 {% highlight python %}
 a, b, c = 1, 2, 3
 {% endhighlight %}
+
+</div>
+
 </div>
 </section>
 
 <section markdown="block">
-### Not a Tuple
+### What About Function Parameters?
 
-__What's a case where comma separated values ARE NOT a tuple?__ &rarr;
+Aren't function parameters comma separated?
 
-<div class="incremental" markdown="block">
-* __Function parameters (both in definitions and when calling functions) are not tuples__, even though they're comma separated 
+* Function parameters (both in definitions and when calling functions) are not tuples, even though they're comma separated 
 * In order to pass a tuple literal to a function, you have to use parentheses to delimit the tuple to prevent ambiguity
 
 {% highlight pycon %}
@@ -128,25 +143,29 @@ __What's a case where comma separated values ARE NOT a tuple?__ &rarr;
 >>> print((1, 2))
 (1, 2)
 {% endhighlight %}
-</div>
 
 </section>
 
+<section markdown="block">
+### Tuple Operations and Built-In Functions
+
+* a tuple is a sequence type, so it has some operations that are similar to strings and lists... 
+* but there are some operations that it doesn't support
+
+</section>
 
 <section markdown="block">
-### Tuple Operations and Built-In Functions 
+### Tuple Operations and Built-In Functions Continued
 
-__Based on what we know about other sequence types, guess what operations, function and/or methods are supported by tuples?  How about ones that aren't?__&rarr;
+__Let's try the following:__
 
-<div class="incremental" markdown="block">
 * Supported Operations:
 	* multiplication and addition
 	* indexing and slicing
 	* len
 	* for ... in
 	* in / not in
-* Unsupported Operations:(because it is immutable, these methods will not work) assignment, append, extend, remove, etc.
-</div>
+* Unsupported Operations:(because it is immutable, these methods will not work) append, extend, remove, etc.
 </section>
 
 <section markdown="block">
@@ -189,27 +208,29 @@ for value in (1, 2, 3):
 <section markdown="block">
 ### Tuple Unpacking / Multiple Assignment
 
-Multiple assignment is achieved by __tuple unpacking__. 
+We talked briefly talked about multiple assignment.  This is generally done with tuples, and when it's done with tuples, it's called  __tuple unpacking__. 
 
 * a tuple of variables on the left of an assignment operator
 * a tuple of values on the right of an operator 
 * both have the same number of elements 
 * each value is assigned to each variable in the order that the elements are in
 
-{% highlight python %}
-c = ("UA2", "Intro to Programming")
-number, name = c
-print(number, name)
+{% highlight pycon %}
+>>> first_name, last_name = ("Hiro", "Protagonist")
+>>> print(first_name)
+Hiro
+>>> print(last_name)
+Protagonist
 {% endhighlight %}
 </section>
 
 <section markdown="block">
-### Tuple Unpacking 
+### Tuple Unpacking Examples
 
 __What does this code output?__
 
 {% highlight python %}
-values = ("python", "java", "php")
+values = (1, 2, 3)
 a, b, c = values
 print(a)
 print(b)
@@ -221,12 +242,20 @@ print(b)
 
 <div class="incremental" markdown="block">
 {% highlight python %}
-python
-java
-java
-php
+1
+2
+2
+3
 {% endhighlight %}
 </div>
+</section>
+
+<section markdown="block">
+### More Info About Multiple Assignment
+
+Tuple unpacking is the most common way of performing multiple assignment... but the assignment operator is actually super flexible:
+
+[More than you ever wanted to know about the assignment operator](http://docs.python.org/3.2/reference/simple_stmts.html#assignment-statements)
 </section>
 
 <section markdown="block">
@@ -235,28 +264,26 @@ php
 A tuple within a list is retrieved as a single object, as with every other element in a list, when using our regular _for loop_variable in some_list_ syntax: 
 
 {% highlight python %}
-characters = [("Mabel", "Pines"), ("Dipper", "Pines")]
+characters = [("Hiro", "Protagonist"), ("Yours", "Truly")]
 for character in characters:
 	print(character)
 {% endhighlight %}
 
 You get each actual tuple, so this prints out:
+
 {% highlight python %}
-('Mabel', 'Pines')
-('Dipper', 'Pines')
+('Hiro', 'Protagonist')
+('Yours', 'Truly')
 {% endhighlight %}
 </section>
 
 <section markdown="block">
 ### List of Tuples Continued
 
-Unpacking works in for loops as well!  
-
-* each element is retrieved from the outer list
-* each element is a tuple which can be unpacked into multiple loop variables
+Unpacking works in for loops as well!  Imagine that each element is retrieved form the outer list.  Each element is a tuple which can be unpacked into multiple loop variables.
 
 {% highlight python %}
-characters = [("Mabel", "Pines"), ("Dipper", "Pines")]
+characters = (("Hiro", "Protagonist"), ("Yours", "Truly"))
 for first, last in characters:
 	print("first name is " + first)
 	print("last name is " + last)
@@ -266,18 +293,16 @@ for first, last in characters:
 <section markdown="block">
 ### List of Tuples Example 
 
-__What does the following code print out?__ &rarr;
-
 {% highlight python %}
-pairs_of_numbers = [("hello", 2), ("hi", 1)]
-for greeting, n in pairs_of_numbers:
-	print(greeting * n)
+pairs_of_numbers = [(1, 2), (2, 3)]
+for a, b in pairs_of_numbers:
+	print(a + b)
 {% endhighlight %}
 
 <div class="incremental" markdown="block">
 {% highlight python %}
-hellohello
-hi
+3
+5
 {% endhighlight %}
 </div>
 </section>
@@ -285,36 +310,52 @@ hi
 <section markdown="block">
 ### Returning Tuples
 
-Tuple unpacking can provide a method of returning multiple values from a function. __What does the follwing code output?__
+Tuples and tuple unpacking can provide a method of returning multiple values from a function. __What do you think this prints out?__
 
 {% highlight python %}
-def plus_or_minus(num, interval):
-	start = num - interval
-	end = num + interval
-	result = (start, num, end)
+def calculate_3d_point():
+	result = (2, 4, 0)
 	return result
 
-low, original, high = plus_or_minus(0, 5)
-print(low)
-print(original)
+x, y, z = calculate_3d_point()
+print("the z coordinate is %s" % (z))
+print("the x coordinate is %s" % (2))
 {% endhighlight %}
 
 <div class="incremental" markdown="block">
 {% highlight python %}
--5
-0
+the z coordinate is 0
+the x coordinate is 2
 {% endhighlight %}
 </div>
 </section>
 
+<section markdown="block">
+### Tuples Exercise 
+
+* __What are two ways of programmatically drawing a square in turtle?__
+* __What are some ways of representing a series of four x, y coordinates?__
+
+<div class="incremental" markdown="block">
+* there are a couple of ways to draw a square with turtle:
+	* for loop and a combination of either left or right and forward or back
+	* goto
+* as literals, as separate variables... or as a tuple of tuples!
+</div>
+</section>
 
 <section markdown="block">
-### Turtle / Tuples Exercise 
+### Tuples Exercise 
 
-1. create a list of tuples that represent x, y coordinates of corners of a square
-2. assume that the bottom left corner is at (0, 0), the upper left is (0, 50), upper right (50, 50), lower right (50, 0)
-3. use a for loop and tuple unpacking to get each x, y value
-4. within the for loop, use a turtle object and goto with your loop variables to draw a square
+1. create a tuple of tuple literals that represent x, y coordinates of corners of a square
+2. assume that the bottom left corner is at (0, 0) and the upper right is (0, 50)
+3. assign that tuple to a variable
+4. use a for loop and tuple unpacking to get each x, y value
+5. within the for loop, use goto with your loop variables to draw the square
+
+</section>
+<section markdown="block">
+### Template
 
 {% highlight python %}
 import turtle
@@ -323,7 +364,11 @@ wn = turtle.Screen()
 # your code here!
 wn.mainloop()
 {% endhighlight %}
+
 </section>
+
+
+
 
 <section markdown="block">
 ### Tuples Solution 
@@ -334,12 +379,16 @@ wn.mainloop()
 </section>
 
 <section markdown="block">
-### When To Use Tuples
 
-__In what situations would a tuple be useful?__ &rarr;
+## That's cool and all... but _why would an immutable list ever be useful?_
 
-<div class="incremental" markdown="block">
-* some Python constructs use tuples (string formatting, multiple assignment)
+
+</section>
+
+<section markdown="block">
+### When To Use Tuples Continued
+
+* some Python constructs use tuples (interpolation, multiple assignment)
 * tuples are _write protected_
 	* prevent an object from being changed
 	* example: constants - values that never change... like origin = (0, 0)
@@ -348,5 +397,4 @@ __In what situations would a tuple be useful?__ &rarr;
 * semantics  
 	* treat related data as a whole
 	* example: points in a 2-dimensional plane
-</div>
 </section>
