@@ -8,7 +8,7 @@ title: Dictionaries
 </section>
 
 <section markdown="block">
-###  Remember That Counting Frequency of Dice Rolls Assignment?
+###  Counting Frequency of Dice Rolls
 
 * roll two thee sided dice simultaneously 1000 times
 * (they exist!  what do you think they [look like](http://suptg.thisisnotatrueending.com/archive/14752803/images/1304091112226.jpg)? 
@@ -367,6 +367,8 @@ print(result)
 
 
 </section>
+
+<section markdown="block">
 
 ### More Dictionary Methods
 
