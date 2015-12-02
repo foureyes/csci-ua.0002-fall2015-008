@@ -63,7 +63,7 @@ Surely you must be thinking: _I really wish that my list was not mutable_
 
 (well... probably not... but...)
 
-<div class="img-container" markdown="block">![Shirley](../../../resources/img/surely.jpg)
+<div class="img-container" markdown="block">![Shirley](../../resources/img/surely.jpg)
 </div>
 
 </section>
