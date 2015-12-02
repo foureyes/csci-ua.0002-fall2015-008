@@ -14,7 +14,7 @@ Slides
 
 * [Tuples](classes/25/tuples.html) 
 * [Dictionaries](classes/25/dictionaries.html)
-* [Dictionaries Exercises](classes/26/exercises.html)
+* [Dictionaries Exercises](classes/25/exercises.html)
 
 {% comment %}
 [Dictionaries Review](classes/26/dictionaries_review.html)

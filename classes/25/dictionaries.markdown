@@ -503,7 +503,7 @@ KeyError: 'fga'
 * {}
 * they're mutable
 * order cannot be guaranteed
-* d["some key"], excepion
+* d["some key"], exception
 * assignment
 * get method
 
