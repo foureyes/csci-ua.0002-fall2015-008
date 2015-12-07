@@ -32,9 +32,9 @@ Jump to Class:
  11/18(midterm #2),
  [11/23](#class23),
  [11/30](#class24),
- [12/02](#class25)
+ [12/02](#class25),
+ [12/07](#class26)
 {% comment %}
- [12/07](#class26),
  [12/09](#class27),
  [12/14](#class28)
 
