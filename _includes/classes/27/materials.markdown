@@ -30,6 +30,9 @@ __Final Exam Practice__
 <article class="assignments" markdown="block">
 #### Assignments / Readings		
 
+* [hint.py - a _in-class_ hint for homework 10, part 3](homework/hw10/hint.py)
+* [zips.txt - text file for hint.py](homework/hw10/zips.txt)
+
 {% comment %}
 Readings
 
