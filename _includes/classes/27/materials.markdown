@@ -10,6 +10,12 @@
 <article class="slides" markdown="block">
 #### Slides
 
+__Final Exam Out-of-Class Review__
+
+* __Date__: 12/15/2015  
+* __Time__: 7:05PM- 8:05PM
+* __Location__: WWH 202
+
 __Final Exam Practice__
 
 * [Final Exam Practice Questions - Set 1](resources/handouts/final/final_practice_questions_set_1.pdf)
