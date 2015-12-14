@@ -14,6 +14,8 @@ __Final Exam__
 * __time:__ {{ site.final_time }}
 * __room:__ {{ site.final_room }}
 
+__Final Exam (Early)__
+
 * __date:__ Wednesday, December 16th (Reading Day)
 * __time:__ 12:00pm -1:50pm
 * __room:__ WWH 109
